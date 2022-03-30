@@ -1,6 +1,6 @@
 <?php
 // Set up the database connection
-$dsn = 'mysql:host=localhost;dbname=my_guitar_shop2';
+$dsn = 'pgsql:host=localhost;dbname=my_guitar_shop2';
 $username =  'root';// //'mgs_user';
 $password =  '';//'pa55word';
 $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
