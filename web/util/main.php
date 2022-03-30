@@ -17,11 +17,9 @@ require_once('util/tags.php');
 require_once('model/database.php');
 
 
-echo "DOCUMENT_ROOT:".$doc_root;
-echo "app_path:".$app_path;
+echo "DOCUMENT_ROOT:".$doc_root."\n";
+echo "app_path:".$app_path."\n";
 
-$doc_root = "https://bac-gsnapwebsite.herokuapp.com/web";
-$app_path = "/";
 
 
 // Define some common functions
