@@ -5,8 +5,8 @@ function get_products_by_category($category_id) {
         SELECT *
         FROM products p
            INNER JOIN categories c
-           ON p.categoryID = c.categoryID
-        WHERE p.categoryID = :category_id';
+           ON p.categoryid = c.categoryid
+        WHERE p.categoryid = :category_id';
     try {
         $statement = $db->prepare($query);
         $statement->bindValue(':category_id', $category_id);
@@ -26,8 +26,8 @@ function get_product($product_id) {
         SELECT *
         FROM products p
            INNER JOIN categories c
-           ON p.categoryID = c.categoryID
-       WHERE productID = :product_id';
+           ON p.categoryid = c.categoryid
+       WHERE productid = :product_id';
     try {
         $statement = $db->prepare($query);
         $statement->bindValue(':product_id', $product_id);
