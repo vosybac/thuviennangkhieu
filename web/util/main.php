@@ -7,11 +7,11 @@ $uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_STRING);
 $dirs = explode('/', $uri);
 $app_path = '/' . $dirs[1] . '/' . $dirs[2] . '/';
 
-$doc_root = "https://bac-gsnapwebsite.herokuapp.com/web/";
+$doc_root = "https://bac-gsnapwebsite.herokuapp.com/web";
 $app_path = "/";
 
 // Set the include path
-//set_include_path($doc_root . $app_path);
+set_include_path($doc_root . $app_path);
 
 // Get common code
 require_once('util/tags.php');
