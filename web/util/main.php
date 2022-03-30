@@ -1,4 +1,10 @@
 <?php
+
+
+require_once('util/tags.php');
+require_once('model/database.php');
+
+
 // Get the document root
 $doc_root = filter_input(INPUT_SERVER, 'DOCUMENT_ROOT', FILTER_SANITIZE_STRING);
 
@@ -13,16 +19,14 @@ $app_path = '/' . $dirs[1] . '/' . $dirs[2] . '/';
 set_include_path($doc_root . $app_path);
 
 // Get common code
-require_once('util/tags.php');
-require_once('model/database.php');
 
 
-echo $doc_root;
-echo "<\br>";
-echo $app_path;
+//echo $doc_root;
+//echo "<\br>";
+//echo $app_path;
 
-$doc_root = "https://bac-gsnapwebsite.herokuapp.com/web";
-$app_path = "/";
+//$doc_root = "https://bac-gsnapwebsite.herokuapp.com/web";
+//$app_path = "/";
 
 
 // Define some common functions
