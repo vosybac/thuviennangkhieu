@@ -15,7 +15,7 @@
           href="<?php echo $app_path ?>/bootstrap/js/bootstrap.js" >
 
      <link rel="stylesheet" type="text/css"
-          href="<?php echo $app_path ?>main.css">
+          href="../main.css">
 </head>
 
 <body>
