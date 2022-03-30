@@ -17,7 +17,7 @@ $app_path = '/' . $dirs[1] . '/' . $dirs[2] . '/';
 // Set the include path
 //set_include_path($doc_root . $app_path);
 
-set_include_path('/app/web/');
+set_include_path('/web');
 require_once('util/tags.php');
 require_once('model/database.php');
 
