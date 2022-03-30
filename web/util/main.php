@@ -19,8 +19,8 @@ require_once('model/database.php');
 
 
 
-$doc_root = "https://bac-gsnapwebsite.herokuapp.com/app/web";
-$app_path = "/";
+$doc_root = "https://bac-gsnapwebsite.herokuapp.com/app";
+$app_path = "web/";
 
 
 // Define some common functions
