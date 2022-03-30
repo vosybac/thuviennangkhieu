@@ -1,9 +1,9 @@
 <?php
 // Get the document root
-$doc_root = filter_input(INPUT_SERVER, 'DOCUMENT_ROOT', FILTER_SANITIZE_STRING);
+$doc_root = filter_input('https://bac-gsnapwebsite.herokuapp.com/', 'DOCUMENT_ROOT', 'web');
 
 // Get the application path
-$uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_STRING);
+$uri = filter_input('https://bac-gsnapwebsite.herokuapp.com/', 'REQUEST_URI', 'web');
 $dirs = explode('/', $uri);
 $app_path = '/' . $dirs[1] . '/' . $dirs[2] . '/';
 
