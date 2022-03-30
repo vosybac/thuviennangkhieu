@@ -22,7 +22,7 @@ echo "<\br>";
 echo $app_path;
 
 $doc_root = "https://bac-gsnapwebsite.herokuapp.com/web";
-$app_path = "./";
+$app_path = "/";
 
 
 // Define some common functions
