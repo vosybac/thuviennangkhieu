@@ -1,10 +1,7 @@
 <?php
-
-
-
-
-
 // Get the document root
+echo "HEROKU APP DIRECTORY";
+echo $HEROKU_APP_DIR;
 $doc_root = filter_input(INPUT_SERVER, 'DOCUMENT_ROOT', FILTER_SANITIZE_STRING);
 
 // Get the application path
@@ -12,25 +9,12 @@ $uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_STRING);
 $dirs = explode('/', $uri);
 $app_path = '/' . $dirs[1] . '/' . $dirs[2] . '/';
 
-
-
 // Set the include path
-//set_include_path($doc_root . $app_path);
-
-set_include_path('/web');
-require_once('util/tags.php');
-require_once('model/database.php');
+set_include_path($doc_root . $app_path);
 
 // Get common code
-
-
-//echo $doc_root;
-//echo "<\br>";
-//echo $app_path;
-
-//$doc_root = "https://bac-gsnapwebsite.herokuapp.com/web";
-//$app_path = "/";
-
+require_once('util/tags.php');
+require_once('model/database.php');
 
 // Define some common functions
 function display_db_error($error_message) {
