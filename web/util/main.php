@@ -17,10 +17,12 @@ require_once('util/tags.php');
 require_once('model/database.php');
 
 
+echo $doc_root;
+echo "<\br>";
+echo $app_path;
 
-
-$doc_root = "https://bac-gsnapwebsite.herokuapp.com/app";
-$app_path = "web/";
+$doc_root = "https://bac-gsnapwebsite.herokuapp.com";
+$app_path = "/web/";
 
 
 // Define some common functions
