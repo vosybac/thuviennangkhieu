@@ -1,25 +1,17 @@
 <?php
 // Get the document root
-
-
-echo "Application path:";
-echo INPUT_SERVER;
-
 $doc_root = filter_input(INPUT_SERVER, 'DOCUMENT_ROOT', FILTER_SANITIZE_STRING);
 
 // Get the application path
 $uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_STRING);
 $dirs = explode('/', $uri);
-//$app_path = '/' . $dirs[1] . '/' . $dirs[2] . '/';
+$app_path = '/' . $dirs[1] . '/' . $dirs[2] . '/';
 
-if(sizeof($dirs) == 2) {
-    $app_path = '/' . $dirs[0] . '/' . $dirs[1] . '/';
-    echo 'app_path';
-    echo $app_path;
-}
+$doc_root = "https://bac-gsnapwebsite.herokuapp.com/web/";
+$app_path = "https://bac-gsnapwebsite.herokuapp.com/";
 
 // Set the include path
-set_include_path($doc_root . $app_path);
+//set_include_path($doc_root . $app_path);
 
 // Get common code
 require_once('util/tags.php');
