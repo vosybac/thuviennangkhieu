@@ -1,4 +1,5 @@
 <?php
+require('../vendor/autoload.php');
 require_once('util/main.php');
 require_once('model/product_db.php');
 
