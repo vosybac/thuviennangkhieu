@@ -1,6 +1,6 @@
 <?php
 // Set up the database connection
-$dsn = 'postgres:host=ec2-52-3-60-53.compute-1.amazonaws.com;dbname=d7d80jq8ebi2v6';
+$dsn = 'pgsql:host=ec2-52-3-60-53.compute-1.amazonaws.com;dbname=d7d80jq8ebi2v6';
 $username =  'kuzxoacduwdksq';// //'mgs_user';
 $password =  '20df762c01f44ceb2f7de923ef7b85397ff71d72462af87a1f7a4c8eac21caa8';//'pa55word';
 $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
