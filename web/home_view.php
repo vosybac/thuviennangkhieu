@@ -22,14 +22,14 @@
     ?>
         <tr>
             <td class="product_image_column" >
-                <img src="images/<?php echo htmlspecialchars($product['productCode']); ?>_s.png"
+                <img src="images/<?php echo htmlspecialchars($product['productcode']); ?>_s.png"
                      alt="&nbsp;">
             </td>
             <td>
                 <p>
-                    <a href="./catalog?product_id=<?php echo
+                    <a href="catalog?product_id=<?php echo
                            $product['productid']; ?>">
-                        <?php echo htmlspecialchars($product['productName']); ?>
+                        <?php echo htmlspecialchars($product['productname']); ?>
                     </a>
                 </p>
                 <p>
