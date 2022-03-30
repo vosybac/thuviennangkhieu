@@ -27,8 +27,8 @@
             </td>
             <td>
                 <p>
-                    <a href="catalog?product_id=<?php echo
-                           $product['productID']; ?>">
+                    <a href="./catalog?product_id=<?php echo
+                           $product['productid']; ?>">
                         <?php echo htmlspecialchars($product['productName']); ?>
                     </a>
                 </p>
