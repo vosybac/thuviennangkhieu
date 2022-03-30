@@ -14,8 +14,8 @@ $dirs = explode('/', $uri);
 
 if(sizeof($dirs) == 2) {
     $app_path = '/' . $dirs[0] . '/' . $dirs[1] . '/';
-    echo 'app_path'
-    echo $app_path
+    echo 'app_path';
+    echo $app_path;
 }
 
 // Set the include path
