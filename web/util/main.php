@@ -9,8 +9,6 @@ $dirs = explode('/', $uri);
 $app_path = '/' . $dirs[0] . '/' . $dirs[1] . '/';
 
 // Set the include path
-echo "include path:";
-echo $doc_root . $app_path;
 set_include_path($doc_root . $app_path);
 
 // Get common code
