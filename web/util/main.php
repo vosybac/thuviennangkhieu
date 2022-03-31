@@ -7,7 +7,7 @@ $doc_root_base =  filter_input(INPUT_SERVER, 'DOCUMENT_ROOT', FILTER_SANITIZE_ST
 
 // Get the application path
 $uri_base = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_STRING);
-$dirs_base = explode('/', $uri);
+$dirs_base = explode('/', $uri_base);
 global $app_path_base; 
 $app_path_base = '/';
 
