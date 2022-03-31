@@ -12,6 +12,8 @@ global $app_path_base;
 $app_path_base = '/';
 
 
+global $doc_root;
+global $app_path;
 
 $doc_root = "/app";
 $app_path = "/web/";
