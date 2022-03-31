@@ -46,5 +46,4 @@ function redirect($url) {
 // Start session to store user and cart data
 session_start();
 
-$app_path = "";
 ?>
