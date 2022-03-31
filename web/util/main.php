@@ -15,8 +15,13 @@
 // Set the include path
 //set_include_path($doc_root . $app_path);
 
+<<<<<<< HEAD:util/main.php
 $doc_root = "/"
 $app_path = "";
+=======
+$doc_root = "/app";
+$app_path = "/web/";
+>>>>>>> parent of 8ab8184 (reconfigure):web/util/main.php
 //set_include_path($app_path);
 set_include_path($doc_root . $app_path);
 
