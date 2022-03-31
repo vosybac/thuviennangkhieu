@@ -2,12 +2,12 @@
     <h2>Liên kết</h2>
     <ul>
         <li>
-            <a href="<?php echo $app_path . 'cart'; ?>">Xem giỏ hàng</a>
+            <a href="<?php echo $app_path_base . 'cart'; ?>">Xem giỏ hàng</a>
         </li>
             <?php
             // Check if user is logged in and
             // display appropriate account links
-            $account_url = $app_path . 'account';
+            $account_url = $app_path_base . 'account';
             $logout_url = $account_url . '?action=logout';
             if (isset($_SESSION['user'])) :
             ?>
@@ -17,7 +17,7 @@
                 <li><a href="<?php echo $account_url; ?>">Đăng nhập</a></li>
             <?php endif; ?>
         <li>
-            <a href="<?php echo $app_path; ?>">Trang chủ</a>
+            <a href="<?php echo $app_path_base; ?>">Trang chủ</a>
         </li>
     </ul>
         
@@ -47,7 +47,7 @@
         <li>
             <!-- This link is for testing only.
                  Remove it from a production application. -->
-            <a href="<?php echo $app_path; ?>admin">Trang quản trị</a>
+            <a href="<?php echo $app_path_base; ?>admin">Trang quản trị</a>
         </li>        
     </ul>
 </aside>

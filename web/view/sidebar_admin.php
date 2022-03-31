@@ -5,7 +5,7 @@
         <?php
         // Check if user is logged in and
         // display appropriate account links
-        $account_url = $app_path . 'admin/account';
+        $account_url = $app_path_base . 'admin/account';
         $logout_url = $account_url . '?action=logout';
         if (isset($_SESSION['admin'])) :
         ?>
@@ -15,10 +15,10 @@
         <?php endif; ?>
         </li>
         <li>
-            <a href="<?php echo $app_path; ?>">Trang chủ</a>
+            <a href="<?php echo $app_path_base; ?>">Trang chủ</a>
         </li>
         <li>
-            <a href="<?php echo $app_path; ?>admin">Trang quản  trị</a>
+            <a href="<?php echo $app_path_base; ?>admin">Trang quản  trị</a>
         </li>
     </ul>
     
@@ -28,7 +28,7 @@
     <ul>
         <?php foreach ($categories as $category) : ?>
         <li>
-            <a href="<?php echo $app_path .
+            <a href="<?php echo $app_path_base .
                 'admin/product?action=list_products' .
                 '&amp;category_id=' . $category['categoryID']; ?>">
                 <?php echo htmlspecialchars($category['categoryName']); ?>
