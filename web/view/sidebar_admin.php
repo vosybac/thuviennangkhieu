@@ -30,8 +30,8 @@
         <li>
             <a href="<?php echo $app_path_base .
                 'admin/product?action=list_products' .
-                '&amp;category_id=' . $category['categoryID']; ?>">
-                <?php echo htmlspecialchars($category['categoryName']); ?>
+                '&amp;category_id=' . $category['categoryid']; ?>">
+                <?php echo htmlspecialchars($category['categoryname']); ?>
             </a>
         </li>
         <?php endforeach; ?>
