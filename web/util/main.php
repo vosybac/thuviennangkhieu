@@ -11,13 +11,9 @@ $uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_STRING);
 global $app_path_base; 
 $app_path_base = '/';
 
-
-
-
 $doc_root = "/app";
 $app_path = "/web/";
-global $include_path = $doc_root . $app_path;
-//set_include_path($app_path);
+
 set_include_path($doc_root . $app_path);
 
 // Get common code
