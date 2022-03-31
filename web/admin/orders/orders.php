@@ -8,7 +8,7 @@
                 $order_id = $order['orderID'];
                 $order_date = strtotime($order['orderDate']);
                 $order_date = date('M j, Y', $order_date);
-                $url = $app_path . 'admin/orders' .
+                $url = $app_path_base . 'admin/orders' .
                        '?action=view_order&amp;order_id=' . $order_id;
                 ?>
                 <li>
@@ -30,7 +30,7 @@
                 $order_id = $order['orderID'];
                 $order_date = strtotime($order['orderDate']);
                 $order_date = date('M j, Y', $order_date);
-                $url = $app_path . 'admin/orders' .
+                $url = $app_path_base . 'admin/orders' .
                        '?action=view_order&amp;order_id=' . $order_id;
                 ?>
                 <li>

@@ -44,7 +44,7 @@
                 $order_id = $order['orderID'];
                 $order_date = strtotime($order['orderDate']);
                 $order_date = date('M j, Y', $order_date);
-                $url = $app_path . 'account' .
+                $url = $app_path_base . 'account' .
                        '?action=view_order&order_id=' . $order_id;
                 ?>
                 <li>

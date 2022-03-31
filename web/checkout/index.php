@@ -41,7 +41,7 @@ switch ($action) {
         break;
     case 'payment':
         if (cart_product_count() == 0) {
-            redirect($app_path . 'cart');
+            redirect($app_path_base . 'cart');
         }
         $card_number = '';
         $card_cvv = '';
@@ -56,7 +56,7 @@ switch ($action) {
         break;
     case 'process':
         if (cart_product_count() == 0) {
-            redirect('Location: ' . $app_path . 'cart');
+            redirect('Location: ' . $app_path_base . 'cart');
         }
         $cart = cart_get_items();
         $card_type = filter_input(INPUT_POST, 'card_type', FILTER_VALIDATE_INT);

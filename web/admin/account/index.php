@@ -184,7 +184,7 @@ switch ($action) {
         if ($admin_id == $_SESSION['admin']['adminID']) {
             $_SESSION['admin'] = get_admin($admin_id);
         }
-        redirect($app_path . 'admin/account/.?action=view_account');
+        redirect($app_path_base . 'admin/account/.?action=view_account');
         break;
     case 'view_delete_confirm':
         $admin_id = filter_input(INPUT_POST, 'admin_id', FILTER_VALIDATE_INT);
@@ -200,11 +200,11 @@ switch ($action) {
     case 'delete':
         $admin_id = filter_input(INPUT_POST, 'admin_id', FILTER_VALIDATE_INT);
         delete_admin($admin_id);
-        redirect($app_path . 'admin/account');
+        redirect($app_path_base . 'admin/account');
         break;
     case 'logout':
         unset($_SESSION['admin']);
-        redirect($app_path . 'admin/account');
+        redirect($app_path_base . 'admin/account');
         break;
     default:
         display_error('Unknown account action: ' . $action);
