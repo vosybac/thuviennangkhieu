@@ -1,5 +1,5 @@
 <?php
-require_once('/app/web/util/main.php');
+require_once('../util/main.php');
 require_once('util/secure_conn.php');
 
 require_once('model/customer_db.php');
@@ -221,14 +221,14 @@ switch ($action) {
         }        
         break;
     case 'view_account':
-        $customer_name = $_SESSION['user']['firstName'] . ' ' .
-                         $_SESSION['user']['lastName'];
-        $email = $_SESSION['user']['emailAddress'];        
+        $customer_name = $_SESSION['user']['firstname'] . ' ' .
+                         $_SESSION['user']['lastname'];
+        $email = $_SESSION['user']['emailaddress'];        
 
-        $shipping_address = get_address($_SESSION['user']['shipAddressID']);
-        $billing_address = get_address($_SESSION['user']['billingAddressID']);        
+        $shipping_address = get_address($_SESSION['user']['shipaddressid']);
+        $billing_address = get_address($_SESSION['user']['billingaddressid']);        
 
-        $orders = get_orders_by_customer_id($_SESSION['user']['customerID']);
+        $orders = get_orders_by_customer_id($_SESSION['user']['customerid']);
         if (!isset($orders)) {
             $orders = array();
         }        
