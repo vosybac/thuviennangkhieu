@@ -1,11 +1,11 @@
 <?php
     // Parse data
-    $category_id = $product['categoryID'];
-    $product_code = $product['productCode'];
-    $product_name = $product['productName'];
+    $category_id = $product['categoryid'];
+    $product_code = $product['productcode'];
+    $product_name = $product['productname'];
     $description = $product['description'];
-    $list_price = $product['listPrice'];
-    $discount_percent = $product['discountPercent'];
+    $list_price = $product['listprice'];
+    $discount_percent = $product['discountpercent'];
 
     // Add HMTL tags to the description
     $description_with_tags = add_tags($description);
@@ -21,7 +21,7 @@
 
     // Get image URL and alternate text
     $image_filename = $product_code . '_m.png';
-    $image_path = $app_path . 'images/' . $image_filename;
+    $image_path = $app_path . '/images/' . $image_filename;
     $image_alt = 'Image filename: ' . $image_filename;
 ?>
 <h1><?php echo htmlspecialchars($product_name); ?></h1>
