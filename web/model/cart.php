@@ -10,8 +10,8 @@ function cart_add_item($product_id, $quantity) {
 
     // Set last category added to cart
     $product = get_product($product_id);
-    $_SESSION['last_category_id'] = $product['categoryID'];
-    $_SESSION['last_category_name'] = $product['categoryName'];
+    $_SESSION['last_category_id'] = $product['categoryid'];
+    $_SESSION['last_category_name'] = $product['categoryname'];
 }
 
 // Update an item in the cart
@@ -34,8 +34,8 @@ function cart_get_items() {
     foreach ($_SESSION['cart'] as $product_id => $quantity ) {
         // Get product data from db
         $product = get_product($product_id);
-        $list_price = $product['listPrice'];
-        $discount_percent = $product['discountPercent'];
+        $list_price = $product['listprice'];
+        $discount_percent = $product['discountpercent'];
         $quantity = intval($quantity);
 
         // Calculate discount
@@ -44,7 +44,7 @@ function cart_get_items() {
         $line_price = round($unit_price * $quantity, 2);
 
         // Store data in items array
-        $items[$product_id]['name'] = $product['productName'];
+        $items[$product_id]['name'] = $product['productname'];
         $items[$product_id]['description'] = $product['description'];
         $items[$product_id]['list_price'] = $list_price;
         $items[$product_id]['discount_percent'] = $discount_percent;
