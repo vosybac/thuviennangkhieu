@@ -1,19 +1,16 @@
 <?php
 // Get the document root
-//$doc_root =  filter_input(INPUT_SERVER, 'DOCUMENT_ROOT', FILTER_SANITIZE_STRING);
+$doc_root_base =  filter_input(INPUT_SERVER, 'DOCUMENT_ROOT', FILTER_SANITIZE_STRING);
 
 
 //$doc_root = "app/web";
 
 // Get the application path
-//$//uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_STRING);
-//$dirs = explode('/', $uri);
-//$app_path = '/' . $dirs[0] . '/' . $dirs[1] . '/';
+$uri_base = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_STRING);
+$dirs_base = explode('/', $uri);
+global $app_path_base; 
+$app_path_base = '/' . $dirs[1] . '/' . $dirs[2] . '/';
 
-
-
-// Set the include path
-//set_include_path($doc_root . $app_path);
 
 
 $doc_root = "/app";

@@ -32,7 +32,7 @@
             foreach($categories as $category) :
                 $name = $category['categoryName'];
                 $id = $category['categoryid'];
-                $url = ltrim($app_path,"/web") . 'catalog?category_id=' . $id;
+                $url =$app_path_base . 'catalog?category_id=' . $id;
         ?>
         <li>
             <a href="<?php echo $url; ?>">
