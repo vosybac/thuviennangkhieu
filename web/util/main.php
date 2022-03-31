@@ -3,7 +3,7 @@
 //$doc_root =  filter_input(INPUT_SERVER, 'DOCUMENT_ROOT', FILTER_SANITIZE_STRING);
 
 
-$doc_root = "/app/web";
+$doc_root = "app/web";
 
 // Get the application path
 $uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_STRING);
