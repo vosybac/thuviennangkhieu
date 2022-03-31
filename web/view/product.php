@@ -39,7 +39,7 @@
         <?php echo  $unit_price_f.'VND'; ?>
         (Bạn tiết kiệm được:
         <?php echo   $discount_amount_f.'VND'; ?>)</p>
-    <form action="<?php echo $app_path . 'cart' ?>" method="get" 
+    <form action="<?php echo $app_path_base . 'cart' ?>" method="get" 
           id="add_to_cart_form">
         <input type="hidden" name="action" value="add" />
         <input type="hidden" name="product_id"
