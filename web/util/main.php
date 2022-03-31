@@ -15,8 +15,10 @@
 // Set the include path
 //set_include_path($doc_root . $app_path);
 
-$app_path = "/app/web/";
-set_include_path($app_path);
+$doc_root = "/app";
+$app_path = "/web/";
+//set_include_path($app_path);
+set_include_path($doc_root . $app_path);
 
 // Get common code
 require_once('util/tags.php');
