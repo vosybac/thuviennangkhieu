@@ -15,7 +15,7 @@
 // Set the include path
 //set_include_path($doc_root . $app_path);
 
-$doc_root = "/app/"
+$doc_root = "/"
 $app_path = "";
 //set_include_path($app_path);
 set_include_path($doc_root . $app_path);
