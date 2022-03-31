@@ -22,6 +22,8 @@ set_include_path($app_path);
 require_once('util/tags.php');
 require_once('model/database.php');
 
+set_include_path("");
+
 // Define some common functions
 function display_db_error($error_message) {
     global $app_path;
