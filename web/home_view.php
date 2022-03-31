@@ -7,8 +7,8 @@
     <table>
     <?php foreach ($products as $product) :
         // Get product data
-        $list_price = $product['listPrice'];
-        $discount_percent = $product['discountPercent'];
+        $list_price = $product['listprice'];
+        $discount_percent = $product['discountpercent'];
         $description = $product['description'];
         
         // Calculate unit price
