@@ -1,6 +1,5 @@
 <?php
-set_include_path($doc_root . $app_path);
-require_once('../util/main.php');
+require_once('util/main.php');
 require_once('util/secure_conn.php');
 
 require_once('model/customer_db.php');
