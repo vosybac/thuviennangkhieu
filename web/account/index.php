@@ -177,7 +177,8 @@ switch ($action) {
             unset($_SESSION['checkout']);
             redirect('../checkout');
         } else {
-            redirect('.');
+            echo "redirect register";
+            //redirect('.');
         }        
         break;
     case 'view_login':
@@ -217,7 +218,8 @@ switch ($action) {
             unset($_SESSION['checkout']);
             redirect('../checkout');
         } else {
-            redirect('.');
+            //redirect('.');
+            echo "redirect checkout";
         }        
         break;
     case 'view_account':
@@ -304,7 +306,8 @@ switch ($action) {
         // Set the new customer data in the session
         $_SESSION['user'] = get_customer($customer_id);
 
-        redirect('.');
+        //redirect('.');
+        echo "redirect update account";
         break;
     case 'view_address_edit':
         // Set up variables for address type
