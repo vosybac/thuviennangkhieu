@@ -3,17 +3,20 @@
 //$doc_root =  filter_input(INPUT_SERVER, 'DOCUMENT_ROOT', FILTER_SANITIZE_STRING);
 
 
-$doc_root = "app/web";
+//$doc_root = "app/web";
 
 // Get the application path
-$uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_STRING);
-$dirs = explode('/', $uri);
-$app_path = '/' . $dirs[0] . '/' . $dirs[1] . '/';
+//$//uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_STRING);
+//$dirs = explode('/', $uri);
+//$app_path = '/' . $dirs[0] . '/' . $dirs[1] . '/';
 
 
 
 // Set the include path
-set_include_path($doc_root . $app_path);
+//set_include_path($doc_root . $app_path);
+
+$app_path = "/app/web/";
+set_include_path($app_path);
 
 // Get common code
 require_once('util/tags.php');
