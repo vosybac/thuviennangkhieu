@@ -9,7 +9,7 @@ $doc_root_base =  filter_input(INPUT_SERVER, 'DOCUMENT_ROOT', FILTER_SANITIZE_ST
 $uri_base = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_SANITIZE_STRING);
 $dirs_base = explode('/', $uri);
 global $app_path_base; 
-$app_path_base = '/' . $dirs[1] . '/' . $dirs[2] . '/';
+$app_path_base = '/' . $dirs[0] . '/' . $dirs[1] . '/';
 
 
 
