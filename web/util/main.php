@@ -16,13 +16,13 @@
 //set_include_path($doc_root . $app_path);
 
 $app_path = "/app/web/";
-set_include_path($app_path);
+
 
 // Get common code
 require_once('util/tags.php');
 require_once('model/database.php');
 
-set_include_path("");
+
 
 // Define some common functions
 function display_db_error($error_message) {
@@ -45,4 +45,6 @@ function redirect($url) {
 
 // Start session to store user and cart data
 session_start();
+
+$app_path = "";
 ?>
