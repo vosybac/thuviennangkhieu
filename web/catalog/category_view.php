@@ -7,8 +7,8 @@
     <?php else: ?>
         <?php foreach ($products as $product) : ?>
         <p>
-            <a href="<?php echo '?product_id=' . $product['productID']; ?>">
-                <?php echo htmlspecialchars($product['productName']); ?>
+            <a href="<?php echo '?product_id=' . $product['productid']; ?>">
+                <?php echo htmlspecialchars($product['productname']); ?>
             </a>
         </p>
         <?php endforeach; ?>
