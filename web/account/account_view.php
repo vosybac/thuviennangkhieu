@@ -29,7 +29,7 @@
         <?php endif; ?>
         <?php echo htmlspecialchars($billing_address['city']); ?>, <?php 
               echo htmlspecialchars($billing_address['state']); ?>
-        <?php echo htmlspecialchars($billing_address['zipCode']); ?><br>
+        <?php echo htmlspecialchars($billing_address['zipcode']); ?><br>
         <?php echo htmlspecialchars($billing_address['phone']); ?>
     </p>
     <form action="." method="post">
