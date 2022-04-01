@@ -385,11 +385,11 @@ switch ($action) {
         // Set the user data in the session
         $_SESSION['user'] = get_customer($customer_id);
 
-        redirect('.');
+        //redirect('.');
         break;
     case 'logout':
         unset($_SESSION['user']);
-        redirect('..');
+        //redirect('..');
         break;
     default:
         display_error("Unknown account action: " . $action);
