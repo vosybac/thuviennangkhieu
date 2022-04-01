@@ -1,5 +1,5 @@
-<?php include '../view/header.php'; ?>
-<?php include '../view/sidebar.php'; ?>
+<?php include '/app/web/view/header.php'; ?>
+<?php include '/app/web/view/sidebar.php'; ?>
 <main>
     <h1>Login</h1>
     <form action="." method="post" id="login_form">
