@@ -8,6 +8,11 @@
     //     header("Location: " . $url);
     //     exit();
     // }
+        
+    $https =     $_SERVER['HTTPS'];
+    echo "Secure:";
+    echo $https;
+    echo ";";
     if (!isset($_SERVER['HTTPS'])) {
         $url = 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
         //header("Location: ".$url);
