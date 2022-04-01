@@ -89,6 +89,7 @@ switch ($action) {
         }
 
         // View admin accounts
+        echo "View Tat Ca admins";
         include 'account_view.php';
         break;
     case 'create':
