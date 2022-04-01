@@ -1,8 +1,8 @@
 <?php
 // Set up the database connection
-$dsn = 'pgsql:host=ec2-52-3-60-53.compute-1.amazonaws.com;dbname=d7d80jq8ebi2v6';
-$username =  'kuzxoacduwdksq';// //'mgs_user';
-$password =  '20df762c01f44ceb2f7de923ef7b85397ff71d72462af87a1f7a4c8eac21caa8';
+$dsn = 'pgsql:host=ec2-34-207-12-160.compute-1.amazonaws.com;dbname=ddvh7as1328tlc';
+$username =  'knjxznfeftubxq';// //'mgs_user';
+$password =  'ff0f4387a3b114364673fdbcdc49a616b6fd2b54ba97b3ad4438437c0c106396';
 $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
 try {
