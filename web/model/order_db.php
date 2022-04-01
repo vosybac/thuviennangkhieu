@@ -114,7 +114,7 @@ function get_order_items($order_id) {
 
 function get_orders_by_customer_id($customer_id) {
     global $db;
-    $query = 'SELECT * FROM orders WHERE customerID = :customer_id';
+    $query = 'SELECT * FROM orders WHERE customerid = :customer_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':customer_id', $customer_id);
     $statement->execute();
