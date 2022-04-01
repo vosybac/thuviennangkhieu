@@ -8,12 +8,14 @@
     //     header("Location: " . $url);
     //     exit();
     // }
-        
-    $https =     $_SERVER['HTTPS'];
-    echo "Secure:";
-    echo $https;
-    echo ";";
-    if (!isset($_SERVER['HTTPS'])) {
+    
+    function isSecure() {
+      return
+        (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+        || $_SERVER['SERVER_PORT'] == 443;
+    }    
+    
+    if (!isSecure()) {
         $url = 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
         //header("Location: ".$url);
         echo "Secure connection:";
