@@ -15,12 +15,12 @@ function is_valid_admin_login($email, $password) {
 
 function admin_count() {
     global $db;
-    $query = 'SELECT count(*) AS adminCount FROM administrators';
+    $query = 'SELECT count(*) AS admincount FROM administrators';
     $statement = $db->prepare($query);
     $statement->execute();
     $result = $statement->fetch();
     $statement->closeCursor();
-    return $result['adminCount'];
+    return $result['admincount'];
 }
 
 function get_all_admins() {
