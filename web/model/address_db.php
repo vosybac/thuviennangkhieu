@@ -3,8 +3,8 @@ function add_address($customer_id, $line1, $line2,
                      $city, $state, $zip_code, $phone) {
     global $db;
     $query = '
-        INSERT INTO addresses (customerID, line1, line2,
-                               city, state, zipCode, phone)
+        INSERT INTO addresses (customerid, line1, line2,
+                               city, state, zipcode, phone)
         VALUES (:customer_id, :line1, :line2,
                 :city, :state, :zip_code, :phone)';
     $statement = $db->prepare($query);
@@ -23,7 +23,7 @@ function add_address($customer_id, $line1, $line2,
 
 function get_address($address_id) {
     global $db;
-    $query = 'SELECT * FROM addresses WHERE addressID = :address_id';
+    $query = 'SELECT * FROM addresses WHERE addressid = :address_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':address_id', $address_id);
     $statement->execute();
@@ -41,9 +41,9 @@ function update_address ($address_id, $line1, $line2,
             line2 = :line2,
             city = :city,
             state = :state,
-            zipCode = :zip_code,
+            zipcode = :zip_code,
             phone = :phone
-        WHERE addressID = :address_id';
+        WHERE addressid = :address_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':address_id', $address_id);
     $statement->bindValue(':line1', $line1);
