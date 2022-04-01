@@ -4,10 +4,10 @@ function get_categories() {
     $query = 'SELECT *,
                 (SELECT COUNT(*)
                  FROM products
-                 WHERE Products.categoryID = Categories.categoryID)
+                 WHERE products.categoryid = categories.categoryid)
                  AS productCount
               FROM categories
-              ORDER BY categoryID';
+              ORDER BY categoryid';
     try {
         $statement = $db->prepare($query);
         $statement->execute();
