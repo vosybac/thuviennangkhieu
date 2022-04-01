@@ -4,13 +4,13 @@
     <h1>Administrator Accounts</h1>
     <?php if (isset($_SESSION['admin'])) : ?>
     <h2>My Account</h2>
-    <p><?php echo $_SESSION['admin']['firstName'] . ' ' .
-            $_SESSION['admin']['lastName'] .
-            ' (' . $_SESSION['admin']['emailAddress'] . ')'; ?></p>
+    <p><?php echo $_SESSION['admin']['firstname'] . ' ' .
+            $_SESSION['admin']['lastname'] .
+            ' (' . $_SESSION['admin']['emailaddress'] . ')'; ?></p>
     <form action="." method="post">
         <input type="hidden" name="action" value="view_edit">
         <input type="hidden" name="admin_id" 
-               value="<?php echo $_SESSION['admin']['adminID']; ?>">
+               value="<?php echo $_SESSION['admin']['adminid']; ?>">
         <input type="submit" value="Edit">
     </form>
     <?php endif; ?>
@@ -18,24 +18,24 @@
         <h2>Other Administrators</h2>
         <table>
         <?php foreach($admins as $admin):
-            if ($admin['adminID'] != $_SESSION['admin']['adminID']) : ?>
+            if ($admin['adminid'] != $_SESSION['admin']['adminid']) : ?>
             <tr>
-                <td><?php echo $admin['lastName'] . ', ' .
-                           $admin['firstName']; ?>
+                <td><?php echo $admin['lastname'] . ', ' .
+                           $admin['firstname']; ?>
                 </td>
                 <td>
                     <form action="." method="post" class="inline">
                         <input type="hidden" name="action"
                             value="view_edit">
                         <input type="hidden" name="admin_id"
-                            value="<?php echo $admin['adminID']; ?>">
+                            value="<?php echo $admin['adminid']; ?>">
                         <input type="submit" value="Edit">
                     </form>
                     <form action="." method="post" class="inline">
                         <input type="hidden" name="action"
                             value="view_delete_confirm">
                         <input type="hidden" name="admin_id"
-                            value="<?php echo $admin['adminID']; ?>">
+                            value="<?php echo $admin['adminid']; ?>">
                         <input type="submit" value="Delete">
                     </form>
                 </td>
