@@ -30,7 +30,7 @@
             
             $categories = get_categories();
             foreach($categories as $category) :
-                $name = $category['categoryName'];
+                $name = $category['categoryname'];
                 $id = $category['categoryid'];
                 $url =$app_path_base . 'catalog?category_id=' . $id;
         ?>
