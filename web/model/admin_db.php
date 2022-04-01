@@ -25,7 +25,7 @@ function admin_count() {
 
 function get_all_admins() {
     global $db;
-    $query = 'SELECT * FROM administrators ORDER BY lastName, firstName';
+    $query = 'SELECT * FROM administrators ORDER BY lastname, firstname';
     $statement = $db->prepare($query);
     $statement->execute();
     $admins = $statement->fetchAll();
@@ -35,7 +35,7 @@ function get_all_admins() {
 
 function get_admin ($admin_id) {
     global $db;
-    $query = 'SELECT * FROM administrators WHERE adminID = :admin_id';
+    $query = 'SELECT * FROM administrators WHERE adminid = :admin_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':admin_id', $admin_id);
     $statement->execute();
