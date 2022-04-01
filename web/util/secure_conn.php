@@ -21,5 +21,7 @@
         echo "Secure connection:";
         echo $url;
         exit();
+    } else {
+        echo "Unsecure connection";
     }
 ?>
