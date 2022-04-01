@@ -72,7 +72,7 @@ function add_admin($email, $first_name, $last_name, $password_1) {
     global $db;
     $password = sha1($email . $password_1);
     $query = '
-        INSERT INTO administrators (emailAddress, password, firstName, lastName)
+        INSERT INTO administrators (emailaddress, password, firstname, lastname)
         VALUES (:email, :password, :first_name, :last_name)';
     $statement = $db->prepare($query);
     $statement->bindValue(':email', $email);
