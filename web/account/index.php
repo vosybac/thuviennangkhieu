@@ -1,6 +1,6 @@
 <?php
-require_once('util/main.php');
-require_once('util/secure_conn.php');
+require_once('../util/main.php');
+require_once('../util/secure_conn.php');
 
 require_once('model/customer_db.php');
 require_once('model/address_db.php');
