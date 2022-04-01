@@ -177,8 +177,7 @@ switch ($action) {
             unset($_SESSION['checkout']);
             redirect('../checkout');
         } else {
-            echo "redirect register";
-            //redirect('.');
+            redirect('.');
         }        
         break;
     case 'view_login':
@@ -218,8 +217,7 @@ switch ($action) {
             unset($_SESSION['checkout']);
             redirect('../checkout');
         } else {
-            //redirect('.');
-            echo "redirect checkout";
+            redirect('.');
         }        
         break;
     case 'view_account':
@@ -306,8 +304,7 @@ switch ($action) {
         // Set the new customer data in the session
         $_SESSION['user'] = get_customer($customer_id);
 
-        //redirect('.');
-        echo "redirect update account";
+        redirect('.');
         break;
     case 'view_address_edit':
         // Set up variables for address type
@@ -385,11 +382,11 @@ switch ($action) {
         // Set the user data in the session
         $_SESSION['user'] = get_customer($customer_id);
 
-        //redirect('.');
+        redirect('.');
         break;
     case 'logout':
         unset($_SESSION['user']);
-        //redirect('..');
+        redirect('..');
         break;
     default:
         display_error("Unknown account action: " . $action);
