@@ -46,7 +46,7 @@ function get_admin ($admin_id) {
 
 function get_admin_by_email ($email) {
     global $db;
-    $query = 'SELECT * FROM administrators WHERE emailAddress = :email';
+    $query = 'SELECT * FROM administrators WHERE emailaddress = :email';
     $statement = $db->prepare($query);
     $statement->bindValue(':email', $email);
     $statement->execute();
