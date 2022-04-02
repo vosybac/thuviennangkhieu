@@ -3,7 +3,7 @@ function is_valid_admin_login($email, $password) {
     global $db;
     $password = sha1($email . $password);
     $query = 'SELECT * FROM administrators
-              WHERE emailAddress = :email AND password = :password';
+              WHERE emailaddress = :email AND password = :password';
     $statement = $db->prepare($query);
     $statement->bindValue(':email', $email);
     $statement->bindValue(':password', $password);
@@ -90,10 +90,10 @@ function update_admin($admin_id, $email, $first_name, $last_name,
     global $db;
     $query = '
         UPDATE administrators
-        SET emailAddress = :email,
-            firstName = :first_name,
-            lastName = :last_name
-        WHERE adminID = :admin_id';
+        SET emailaddress = :email,
+            firstname = :first_name,
+            lastname = :last_name
+        WHERE adminid = :admin_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':email', $email);
     $statement->bindValue(':first_name', $first_name);
@@ -112,7 +112,7 @@ function update_admin($admin_id, $email, $first_name, $last_name,
         $query = '
             UPDATE administrators
             SET password = :password
-            WHERE adminID = :admin_id';
+            WHERE adminid = :admin_id';
         $statement = $db->prepare($query);
         $statement->bindValue(':password', $password);
         $statement->bindValue(':admin_id', $admin_id);
@@ -123,7 +123,7 @@ function update_admin($admin_id, $email, $first_name, $last_name,
 
 function delete_admin($admin_id) {
     global $db;
-    $query = 'DELETE FROM administrators WHERE adminID = :admin_id';
+    $query = 'DELETE FROM administrators WHERE adminid = :admin_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':admin_id', $admin_id);
     $statement->execute();

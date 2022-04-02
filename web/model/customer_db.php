@@ -2,8 +2,8 @@
 function is_valid_customer_email($email) {
     global $db;
     $query = '
-        SELECT customerID FROM customers
-        WHERE emailAddress = :email';
+        SELECT customerid FROM customers
+        WHERE emailaddress = :email';
     $statement = $db->prepare($query);
     $statement->bindValue(':email', $email);
     $statement->execute();
@@ -17,7 +17,7 @@ function is_valid_customer_login($email, $password) {
     $password = sha1($email . $password);
     $query = '
         SELECT * FROM customers
-        WHERE emailAddress = :email AND password = :password';
+        WHERE emailaddress = :email AND password = :password';
     $statement = $db->prepare($query);
     $statement->bindValue(':email', $email);
     $statement->bindValue(':password', $password);
@@ -29,7 +29,7 @@ function is_valid_customer_login($email, $password) {
 
 function get_customer($customer_id) {
     global $db;
-    $query = 'SELECT * FROM customers WHERE customerID = :customer_id';
+    $query = 'SELECT * FROM customers WHERE customerid = :customer_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':customer_id', $customer_id);
     $statement->execute();
@@ -40,7 +40,7 @@ function get_customer($customer_id) {
 
 function get_customer_by_email($email) {
     global $db;
-    $query = 'SELECT * FROM customers WHERE emailAddress = :email';
+    $query = 'SELECT * FROM customers WHERE emailaddress = :email';
     $statement = $db->prepare($query);
     $statement->bindValue(':email', $email);
     $statement->execute();
@@ -51,8 +51,8 @@ function get_customer_by_email($email) {
 
 function customer_change_shipping_id($customer_id, $address_id) {
     global $db;
-    $query = 'UPDATE customers SET shipAddressID = :address_id
-              WHERE customerID = :customer_id';
+    $query = 'UPDATE customers SET shipaddressid = :address_id
+              WHERE customerid = :customer_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':address_id', $address_id);
     $statement->bindValue(':customer_id', $customer_id);
@@ -62,8 +62,8 @@ function customer_change_shipping_id($customer_id, $address_id) {
 
 function customer_change_billing_id($customer_id, $address_id) {
     global $db;
-    $query = 'UPDATE customers SET billingAddressID = :address_id
-              WHERE customerID = :customer_id';
+    $query = 'UPDATE customers SET billingAddressid = :address_id
+              WHERE customerid = :customer_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':address_id', $address_id);
     $statement->bindValue(':customer_id', $customer_id);
@@ -76,7 +76,7 @@ function add_customer($email, $first_name, $last_name,
     global $db;
     $password = sha1($email . $password_1);
     $query = '
-        INSERT INTO customers (emailAddress, password, firstName, lastName)
+        INSERT INTO customers (emailaddress, password, firstname, lastname)
         VALUES (:email, :password, :first_name, :last_name)';
     $statement = $db->prepare($query);
     $statement->bindValue(':email', $email);
@@ -94,10 +94,10 @@ function update_customer($customer_id, $email, $first_name, $last_name,
     global $db;
     $query = '
         UPDATE customers
-        SET emailAddress = :email,
-            firstName = :first_name,
-            lastName = :last_name
-        WHERE customerID = :customer_id';
+        SET emailaddress = :email,
+            firstname = :first_name,
+            lastname = :last_name
+        WHERE customerid = :customer_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':email', $email);
     $statement->bindValue(':first_name', $first_name);
@@ -111,7 +111,7 @@ function update_customer($customer_id, $email, $first_name, $last_name,
         $query = '
             UPDATE customers
             SET password = :password
-            WHERE customerID = :customer_id';
+            WHERE customerid = :customer_id';
         $statement = $db->prepare($query);
         $statement->bindValue(':password', $password);
         $statement->bindValue(':customer_id', $customer_id);

@@ -103,7 +103,7 @@ function get_order($order_id) {
 
 function get_order_items($order_id) {
     global $db;
-    $query = 'SELECT * FROM OrderItems WHERE orderID = :order_id';
+    $query = 'SELECT * FROM orderitems WHERE orderid = :order_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':order_id', $order_id);
     $statement->execute();
@@ -127,8 +127,8 @@ function get_unfilled_orders() {
     global $db;
     $query = 'SELECT * FROM orders
               INNER JOIN customers
-              ON customers.customerID = orders.customerID
-              WHERE shipDate IS NULL ORDER BY orderDate';
+              ON customers.customerid = orders.customerid
+              WHERE shipdate IS NULL ORDER BY orderdate';
     $statement = $db->prepare($query);
     $statement->execute();
     $orders = $statement->fetchAll();
@@ -141,8 +141,8 @@ function get_filled_orders() {
     $query =
         'SELECT * FROM orders
          INNER JOIN customers
-         ON customers.customerID = orders.customerID
-         WHERE shipDate IS NOT NULL ORDER BY orderDate';
+         ON customers.customerid = orders.customerid
+         WHERE shipdate IS NOT NULL ORDER BY orderdate';
     $statement = $db->prepare($query);
     $statement->execute();
     $orders = $statement->fetchAll();
@@ -155,8 +155,8 @@ function set_ship_date($order_id) {
     $ship_date = date("Y-m-d H:i:s");
     $query = '
          UPDATE orders
-         SET shipDate = :ship_date
-         WHERE orderID = :order_id';
+         SET shipdate = :ship_date
+         WHERE orderid = :order_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':ship_date', $ship_date);
     $statement->bindValue(':order_id', $order_id);
@@ -166,7 +166,7 @@ function set_ship_date($order_id) {
 
 function delete_order($order_id) {
     global $db;
-    $query = 'DELETE FROM orders WHERE orderID = :order_id';
+    $query = 'DELETE FROM orders WHERE orderid = :order_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':order_id', $order_id);
     $statement->execute();

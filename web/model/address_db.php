@@ -59,13 +59,13 @@ function update_address ($address_id, $line1, $line2,
 function disable_or_delete_address($address_id) {
     global $db;
     if (is_used_address_id($address_id)) {
-        $query = 'UPDATE addresses SET disabled = 1 WHERE addressID = :address_id';
+        $query = 'UPDATE addresses SET disabled = 1 WHERE addressid = :address_id';
         $statement = $db->prepare($query);
         $statement->bindValue(":address_id", $address_id);
         $statement->execute();
         $statement->closeCursor();
     } else {
-        $query = 'DELETE FROM addresses WHERE addressID = :address_id';
+        $query = 'DELETE FROM addresses WHERE addressid = :address_id';
         $statement = $db->prepare($query);
         $statement->bindValue(":address_id", $address_id);
         $statement->execute();
@@ -77,7 +77,7 @@ function is_used_address_id($address_id) {
     global $db;
 
     // Check if the address is used as a billing address
-    $query1 = "SELECT COUNT(*) FROM orders WHERE billingAddressID = :value";
+    $query1 = "SELECT COUNT(*) FROM orders WHERE billingaddressid = :value";
     $statement1 = $db->prepare($query1);
     $statement1->bindValue(':value', $address_id);
     $statement1->execute();
@@ -87,7 +87,7 @@ function is_used_address_id($address_id) {
     if ($billing_count > 0) { return true; }
 
     // Check if the address is used as a shipping address
-    $query2 = "SELECT COUNT(*) FROM orders WHERE shipAddressID = :value";
+    $query2 = "SELECT COUNT(*) FROM orders WHERE shipaddressid = :value";
     $statement2 = $db->prepare($query2);
     $statement2->bindValue(':value', $address_id);
     $statement2->execute();
