@@ -1,4 +1,4 @@
-<?php include '../../view/header.php'; ?>
+<?php include '../../view/header_admin.php'; ?>
 <?php include '../../view/sidebar_admin.php'; ?>
 <?php if (!isset($product_order_count)) { $product_order_count = 0; } ?>
 <main>

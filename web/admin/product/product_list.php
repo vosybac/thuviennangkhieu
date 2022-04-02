@@ -1,4 +1,4 @@
-<?php include '../../view/header.php'; ?>
+<?php include '../../view/header_admin.php'; ?>
 <?php include '../../view/sidebar_admin.php'; ?>
 <main>
     <h1 class="top">Product Manager - List Products</h1>
