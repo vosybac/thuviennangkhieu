@@ -1,5 +1,9 @@
-<?php include 'view/header.php'; ?>
-<?php include 'view/sidebar_admin.php'; ?>
+<?php 
+include '../view/header_admin.php';
+include '../view/sidebar_admin.php';
+
+?>
+
 <main>
     <h1>Admin Login</h1>
     <form action="." method="post" id="login_form">
@@ -23,4 +27,3 @@
         <?php endif; ?>
     </form>
 </main>
-<?php include 'view/footer.php'; ?>
