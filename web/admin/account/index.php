@@ -1,12 +1,12 @@
-
+<?php require_once('../../util/main.php'); ?>
 
 
 <?php include '../../view/header.php'; ?>
-<?php include 'view/sidebar_admin.php'; ?>
+<?php include '../../view/sidebar_admin.php'; ?>
 
 <?php
 
-require_once('../../util/main.php');
+
 require_once('util/secure_conn.php');
 require_once('model/admin_db.php');
 require_once('model/fields.php');
