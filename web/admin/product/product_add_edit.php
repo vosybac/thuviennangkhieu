@@ -18,20 +18,20 @@
             <input type="hidden" name="action" value="add_product">
         <?php endif; ?>
             <input type="hidden" name="category_id"
-                   value="<?php echo $product['categoryID']; ?>">
+                   value="<?php echo $product['categoryid']; ?>">
 
         <label>Category:</label>
         <select name="category_id">
         <?php foreach ($categories as $category) : 
-            if ($category['categoryID'] == $product['categoryID']) {
+            if ($category['categoryid'] == $product['categoryid']) {
                 $selected = 'selected';
             } else {
                 $selected = '';
             }
         ?>
-            <option value="<?php echo $category['categoryID']; ?>"<?php
+            <option value="<?php echo $category['categoryid']; ?>"<?php
                       echo $selected ?>>
-                <?php echo htmlspecialchars($category['categoryName']); ?>
+                <?php echo htmlspecialchars($category['categoryname']); ?>
             </option>
         <?php endforeach; ?>
         </select>
@@ -39,23 +39,23 @@
 
         <label>Code:</label>
         <input type="text" name="code"
-               value="<?php echo htmlspecialchars($product['productCode']); ?>">
+               value="<?php echo htmlspecialchars($product['productcode']); ?>">
         <br>
 
         <label>Name:</label>
         <input type="text" name="name" 
-               value="<?php echo htmlspecialchars($product['productName']); ?>" 
+               value="<?php echo htmlspecialchars($product['productname']); ?>" 
                size="50">
         <br>
 
         <label>List Price:</label>
         <input type="text" name="price" 
-               value="<?php echo $product['listPrice']; ?>">
+               value="<?php echo $product['listprice']; ?>">
         <br>
 
         <label>Discount Percent:</label>
         <input type="text" name="discount_percent" 
-               value="<?php echo $product['discountPercent']; ?>">
+               value="<?php echo $product['discountpercent']; ?>">
         <br>
 
         <label>Description:</label>

@@ -13,18 +13,18 @@
         <form action="." method="post" id="edit_button_form" >
             <input type="hidden" name="action" value="show_add_edit_form">
             <input type="hidden" name="product_id"
-                   value="<?php echo $product['productID']; ?>">
+                   value="<?php echo $product['productid']; ?>">
             <input type="hidden" name="category_id"
-                   value="<?php echo $product['categoryID']; ?>">
+                   value="<?php echo $product['categoryid']; ?>">
             <input type="submit" value="Edit Product">
         </form>
         <?php if ($product_order_count == 0) : ?>
         <form action="." method="post" id="delete_button_form" >
             <input type="hidden" name="action" value="delete_product">
             <input type="hidden" name="product_id"
-                   value="<?php echo $product['productID']; ?>">
+                   value="<?php echo $product['productid']; ?>">
             <input type="hidden" name="category_id"
-                   value="<?php echo $product['categoryID']; ?>">
+                   value="<?php echo $product['categoryid']; ?>">
             <input type="submit" value="Delete Product">
         </form>
         <?php endif; ?>
@@ -35,12 +35,12 @@
             <input type="hidden" name="action" value="upload_image">
             <input type="file" name="file1"><br>
             <input type="hidden" name="product_id"
-                   value="<?php echo $product['productID']; ?>">
+                   value="<?php echo $product['productid']; ?>">
             <input type="submit" value="Upload Image">
         </form>
-        <p><a href="../../images/<?php echo $product['productCode']; ?>.png">
+        <p><a href="../../images/<?php echo $product['productcode']; ?>.png">
             View large image</a></p>
-        <p><a href="../../images/<?php echo $product['productCode']; ?>_s.png">
+        <p><a href="../../images/<?php echo $product['productcode']; ?>_s.png">
             View small image</a></p>
     </div>
 </main>
