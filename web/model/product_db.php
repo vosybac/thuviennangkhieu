@@ -65,10 +65,10 @@ function add_product($category_id, $code, $name, $description,
         $price, $discount_percent) {
     global $db;
     $query = 'INSERT INTO products
-                 (categoryid, productcode, productname, description, listprice,
+                 (productid, categoryid, productcode, productname, description, listprice,
                   discountpercent, dateadded)
               VALUES
-                 (:category_id, :code, :name, :description, :price,
+                 (nextval(\'books_sequence\'), :category_id, :code, :name, :description, :price,
                   :discount_percent, NOW())';
     try {
         $statement = $db->prepare($query);
