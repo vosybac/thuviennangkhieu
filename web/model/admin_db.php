@@ -59,7 +59,7 @@ function is_valid_admin_email($email) {
     global $db;
     $query = '
         SELECT * FROM administrators
-        WHERE emailAddress = :email';
+        WHERE emailaddress = :email';
     $statement = $db->prepare($query);
     $statement->bindValue(':email', $email);
     $statement->execute();
