@@ -65,8 +65,8 @@ function add_product($category_id, $code, $name, $description,
         $price, $discount_percent) {
     global $db;
     $query = 'INSERT INTO products
-                 (categoryID, productCode, productName, description, listPrice,
-                  discountPercent, dateAdded)
+                 (categoryid, productcode, productname, description, listprice,
+                  discountpercent, dateadded)
               VALUES
                  (:category_id, :code, :name, :description, :price,
                   :discount_percent, NOW())';
