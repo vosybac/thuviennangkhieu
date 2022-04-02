@@ -1,3 +1,7 @@
+
+<?php include '../view/header.php'; ?>
+<?php include '../view/sidebar_admin.php'; ?>
+
 <?php
 require_once('../util/main.php');
 require_once('../util/secure_conn.php');
@@ -393,3 +397,5 @@ switch ($action) {
         break;
 }
 ?>
+
+<?php include '../view/footer.php'; ?>

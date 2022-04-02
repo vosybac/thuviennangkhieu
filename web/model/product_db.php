@@ -46,7 +46,7 @@ function get_product_order_count($product_id) {
     $query = '
         SELECT COUNT(*) AS orderCount
         FROM orderitems
-        WHERE productID = :product_id';
+        WHERE productid = :product_id';
     try {
         $statement = $db->prepare($query);
         $statement->bindValue(':product_id', $product_id);
@@ -94,14 +94,14 @@ function update_product($product_id, $code, $name, $desc,
                         $price, $discount, $category_id) {
     global $db;
     $query = '
-        UPDATE Products
+        UPDATE products
         SET productName = :name,
             productCode = :code,
             description = :desc,
             listPrice = :price,
             discountPercent = :discount,
-            categoryID = :category_id
-        WHERE productID = :product_id';
+            categoryid = :category_id
+        WHERE productid = :product_id';
     try {
         $statement = $db->prepare($query);
         $statement->bindValue(':name', $name);
@@ -121,7 +121,7 @@ function update_product($product_id, $code, $name, $desc,
 
 function delete_product($product_id) {
     global $db;
-    $query = 'DELETE FROM products WHERE productID = :product_id';
+    $query = 'DELETE FROM products WHERE productid = :product_id';
     try {
         $statement = $db->prepare($query);
         $statement->bindValue(':product_id', $product_id);
