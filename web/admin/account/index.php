@@ -149,9 +149,9 @@ switch ($action) {
         // Get admin user data
         $admin_id = filter_input(INPUT_POST, 'admin_id', FILTER_VALIDATE_INT);
         $admin = get_admin($admin_id);
-        $first_name = $admin['firstName'];
-        $last_name = $admin['lastName'];
-        $email = $admin['emailAddress'];
+        $first_name = $admin['firstname'];
+        $last_name = $admin['lastname'];
+        $email = $admin['emailaddress'];
         $password_message = '';
 
         // Display Edit page
@@ -194,13 +194,13 @@ switch ($action) {
         break;
     case 'view_delete_confirm':
         $admin_id = filter_input(INPUT_POST, 'admin_id', FILTER_VALIDATE_INT);
-        if ($admin_id == $_SESSION['admin']['adminID']) {
+        if ($admin_id == $_SESSION['admin']['adminid']) {
             display_error('You cannot delete your own account.');
         }
         $admin = get_admin($admin_id);
-        $first_name = $admin['firstName'];
-        $last_name = $admin['lastName'];
-        $email = $admin['emailAddress'];
+        $first_name = $admin['firstname'];
+        $last_name = $admin['lastname'];
+        $email = $admin['emailaddress'];
         include 'account_delete.php';
         break;
     case 'delete':
