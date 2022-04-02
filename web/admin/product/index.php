@@ -114,10 +114,11 @@ switch ($action) {
         $product_id = filter_input(INPUT_POST, 'product_id', 
                 FILTER_VALIDATE_INT);
         $product = get_product($product_id);
-        $product_code = $product['productCode'];
+        $product_code = $product['productcode'];
 
         $image_filename = $product_code . '.png';
-        $image_dir = $doc_root . $app_path_base . 'images/';
+        //$image_dir = $doc_root . $app_path_base . 'images/';
+        $image_dir = $app_path_base . 'images/';
 
         if (isset($_FILES['file1'])) {
             $source = $_FILES['file1']['tmp_name'];
