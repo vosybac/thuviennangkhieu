@@ -1,11 +1,14 @@
 <?php
+
+include '../../view/header.php';
+include '../../view/sidebar_admin.php';
+
 require_once('../../util/main.php');
 require_once('util/secure_conn.php');
 require_once('model/admin_db.php');
 require_once('model/fields.php');
 require_once('model/validate.php');
-include '../../view/header.php';
-include '../../view/sidebar_admin.php';
+
 
 $action = filter_input(INPUT_POST, 'action');
 if (admin_count() == 0) {
