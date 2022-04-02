@@ -14,3 +14,8 @@
     <p><a href="account">Account Manager</a></p>
 </main>
 
+
+<?php 
+    include '../view/footer_admin.php';
+?>
+
