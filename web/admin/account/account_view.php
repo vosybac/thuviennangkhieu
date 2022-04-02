@@ -1,3 +1,8 @@
+<?php 
+include '../../view/header_admin.php';
+include '../../view/sidebar_admin.php';
+?>
+
 
 <main>
     <h1>Administrator Accounts</h1>

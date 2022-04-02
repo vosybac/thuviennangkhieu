@@ -1,6 +1,6 @@
 <?php 
-include '../view/header_admin.php';
-include '../view/sidebar_admin.php';
+include '../../view/header_admin.php';
+include '../../view/sidebar_admin.php';
 
 ?>
 
