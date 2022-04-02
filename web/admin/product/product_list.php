@@ -8,13 +8,13 @@
         <p>There are no products for this category.</p>
     <?php else : ?>
         <h1>
-            <?php echo htmlspecialchars($current_category['categoryName']); ?>
+            <?php echo htmlspecialchars($current_category['categoryname']); ?>
         </h1>
             <?php foreach ($products as $product) : ?>
             <p>
                 <a href="?action=view_product&amp;product_id=<?php
-                          echo $product['productID']; ?>">
-                    <?php echo htmlspecialchars($product['productName']); ?>
+                          echo $product['productid']; ?>">
+                    <?php echo htmlspecialchars($product['productname']); ?>
                 </a>
             </p>
             <?php endforeach; ?>

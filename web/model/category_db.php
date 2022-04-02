@@ -25,7 +25,7 @@ function get_category($category_id) {
     $query = '
         SELECT *
         FROM categories
-        WHERE categoryID = :category_id';
+        WHERE categoryid = :category_id';
     try {
         $statement = $db->prepare($query);
         $statement->bindValue(':category_id', $category_id);
