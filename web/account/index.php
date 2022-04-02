@@ -1,6 +1,6 @@
 
-<?php include '../view/header.php'; ?>
-<?php include '../view/sidebar_admin.php'; ?>
+<?php include '../../view/header.php'; ?>
+<?php include '../../view/sidebar_admin.php'; ?>
 
 <?php
 require_once('../util/main.php');
@@ -398,4 +398,4 @@ switch ($action) {
 }
 ?>
 
-<?php include '../view/footer.php'; ?>
+<?php include '../../view/footer.php'; ?>
