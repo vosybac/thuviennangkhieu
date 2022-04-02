@@ -18,7 +18,7 @@ switch ($action) {
     case 'category':
         // Get category data
         $category = get_category($category_id);
-        $category_name = $category['categoryName'];
+        $category_name = $category['categoryname'];
         $products = get_products_by_category($category_id);
 
         // Display category
