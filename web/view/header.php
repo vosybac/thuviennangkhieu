@@ -3,12 +3,12 @@
 
 <!-- the head section -->
 <head>
-    <title>Thư Viện Năng Khiếu</title>
+    <title>Thư Viện Võ Sỹ Bắc.</title>
      <link rel="stylesheet" type="text/css"
           href="../main.css">
 </head>
 
 <body>
 <header>
-    <h1>Thư Viện Năng Khiếu</h1>
+    <h1>Thư Viện Võ Sỹ Bắc.</h1>
 </header>
