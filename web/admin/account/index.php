@@ -1,3 +1,9 @@
+
+
+
+<?php include '../../view/header.php'; ?>
+<?php include 'view/sidebar_admin.php'; ?>
+
 <?php
 
 require_once('../../util/main.php');
@@ -5,6 +11,7 @@ require_once('util/secure_conn.php');
 require_once('model/admin_db.php');
 require_once('model/fields.php');
 require_once('model/validate.php');
+
 
 
 $action = filter_input(INPUT_POST, 'action');
@@ -91,7 +98,6 @@ switch ($action) {
         }
 
         // View admin accounts
-        echo "View Tat Ca admins";
         include 'account_view.php';
         break;
     case 'create':
@@ -214,3 +220,5 @@ switch ($action) {
         break;
 }
 ?>
+
+<?php include '../../view/footer.php'; ?>
