@@ -14,7 +14,8 @@ $app_path_base = '/';
 $doc_root = "/app";
 $app_path = "/web/";
 
-global $include_path = $doc_root . $app_path;
+global $include_path;
+$include_path = $doc_root . $app_path;
 
 set_include_path($doc_root . $app_path);
 
