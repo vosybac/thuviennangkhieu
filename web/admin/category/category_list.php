@@ -9,21 +9,21 @@
             <form action="." method="post" >
             <td>
                  <input type="text" name="name"
-                        value="<?php echo htmlspecialchars($category['categoryName']); ?>">
+                        value="<?php echo htmlspecialchars($category['categoryname']); ?>">
             </td>
             <td>
                 <input type="hidden" name="action" value="update_category">
                 <input type="hidden" name="category_id"
-                       value="<?php echo $category['categoryID']; ?>">
+                       value="<?php echo $category['categoryid']; ?>">
                 <input type="submit" value="Update">
             </td>
             </form>
             <td>
-                <?php if ($category['productCount'] == 0) : ?>
+                <?php if ($category['productcount'] == 0) : ?>
                 <form action="." method="post" >
                     <input type="hidden" name="action" value="delete_category">
                     <input type="hidden" name="category_id"
-                           value="<?php echo $category['categoryID']; ?>">
+                           value="<?php echo $category['categoryid']; ?>">
                     <input type="submit" value="Delete">
                 </form>
                 <?php endif; ?>
