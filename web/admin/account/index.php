@@ -1,8 +1,5 @@
 <?php
 
-include '../../view/header.php';
-include '../../view/sidebar_admin.php';
-
 require_once('../../util/main.php');
 require_once('util/secure_conn.php');
 require_once('model/admin_db.php');
