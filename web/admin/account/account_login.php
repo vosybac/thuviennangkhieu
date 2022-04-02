@@ -27,3 +27,5 @@ include '../../view/sidebar_admin.php';
         <?php endif; ?>
     </form>
 </main>
+
+<?php include '../../view/footer_admin.php'; ?>

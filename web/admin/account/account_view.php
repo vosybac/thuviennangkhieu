@@ -80,3 +80,5 @@ include '../../view/sidebar_admin.php';
         <input type="submit" value="Add Admin User">
     </form>
 </main>
+
+<?php include '../../view/footer_admin.php'; ?>
