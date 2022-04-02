@@ -118,7 +118,7 @@ switch ($action) {
 
         $image_filename = $product_code . '.png';
         //$image_dir = $doc_root . $app_path_base . 'images/';
-        $image_dir = $app_path_base . 'images';
+        $image_dir = $include_path. 'images/';
 
         if (isset($_FILES['file1'])) {
             $source = $_FILES['file1']['tmp_name'];
