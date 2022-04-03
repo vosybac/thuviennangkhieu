@@ -46,4 +46,4 @@
         <p>There are no shipped orders.</p>
     <?php endif; ?>
 </main>
-<?php include '../../view/footer.php'; ?>
+<?php include '../../view/footer_admin.php'; ?>

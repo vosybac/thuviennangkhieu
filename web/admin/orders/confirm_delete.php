@@ -17,4 +17,4 @@
         <input type="submit" value="Cancel">
     </form>
 </main>
-<?php include '../../view/footer.php'; ?>
+<?php include '../../view/footer_admin.php'; ?>
