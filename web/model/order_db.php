@@ -16,7 +16,7 @@ function shipping_cost() {
 // This function calcualtes the sales tax,
 // but only for orders in California (CA)
 function tax_amount($subtotal) {
-    $shipping_address = get_address($_SESSION['user']['shipAddressID']);
+    $shipping_address = get_address($_SESSION['user']['shipaddressid']);
     $state = $shipping_address['state'];
     $state = strtoupper($state);
     switch ($state) {
@@ -43,18 +43,18 @@ function card_name($card_type) {
 
 function add_order($card_type, $card_number, $card_cvv, $card_expires) {
     global $db;
-    $customer_id = $_SESSION['user']['customerID'];
-    $billing_id = $_SESSION['user']['billingAddressID'];
-    $shipping_id = $_SESSION['user']['shipAddressID'];
+    $customer_id = $_SESSION['user']['customerid'];
+    $billing_id = $_SESSION['user']['billingaddressid'];
+    $shipping_id = $_SESSION['user']['shipAddressid'];
     $shipping_cost = shipping_cost();
     $tax = tax_amount(cart_subtotal());
     $order_date = date("Y-m-d H:i:s");
 
     $query = '
-         INSERT INTO orders (customerID, orderDate, shipAmount, taxAmount,
+         INSERT INTO orders (orderid,customerid, orderDate, shipAmount, taxAmount,
                              shipAddressID, cardType, cardNumber,
                              cardExpires, billingAddressID)
-         VALUES (:customer_id, :order_date, :ship_amount, :tax_amount,
+         VALUES (nextval(\'books_sequence\'), :customer_id, :order_date, :ship_amount, :tax_amount,
                  :shipping_id, :card_type, :card_number,
                  :card_expires, :billing_id)';
     $statement = $db->prepare($query);
@@ -77,8 +77,8 @@ function add_order_item($order_id, $product_id,
                         $item_price, $discount, $quantity) {
     global $db;
     $query = '
-        INSERT INTO OrderItems (orderID, productID, itemPrice,
-                                discountAmount, quantity)
+        INSERT INTO OrderItems (orderid, productid, itemprice,
+                                discountamount, quantity)
         VALUES (:order_id, :product_id, :item_price, :discount, :quantity)';
     $statement = $db->prepare($query);
     $statement->bindValue(':order_id', $order_id);
@@ -92,7 +92,7 @@ function add_order_item($order_id, $product_id,
 
 function get_order($order_id) {
     global $db;
-    $query = 'SELECT * FROM orders WHERE orderID = :order_id';
+    $query = 'SELECT * FROM orders WHERE orderid = :order_id';
     $statement = $db->prepare($query);
     $statement->bindValue(':order_id', $order_id);
     $statement->execute();
