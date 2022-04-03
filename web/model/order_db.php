@@ -45,15 +45,15 @@ function add_order($card_type, $card_number, $card_cvv, $card_expires) {
     global $db;
     $customer_id = $_SESSION['user']['customerid'];
     $billing_id = $_SESSION['user']['billingaddressid'];
-    $shipping_id = $_SESSION['user']['shipAddressid'];
+    $shipping_id = $_SESSION['user']['shipaddressid'];
     $shipping_cost = shipping_cost();
     $tax = tax_amount(cart_subtotal());
     $order_date = date("Y-m-d H:i:s");
 
     $query = '
-         INSERT INTO orders (orderid,customerid, orderDate, shipAmount, taxAmount,
-                             shipAddressID, cardType, cardNumber,
-                             cardExpires, billingAddressID)
+         INSERT INTO orders (orderid,customerid, orderdate, shipamount, taxamount,
+                             shipaddressid, cardtype, cardnumber,
+                             cardexpires, billingaddressid)
          VALUES (nextval(\'books_sequence\'), :customer_id, :order_date, :ship_amount, :tax_amount,
                  :shipping_id, :card_type, :card_number,
                  :card_expires, :billing_id)';
