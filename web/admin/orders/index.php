@@ -31,27 +31,27 @@ switch($action) {
         $order_items = get_order_items($order_id);
 
         // Get customer data
-        $customer = get_customer($order['customerID']);
-        $name = $customer['firstName'] . ' ' . $customer['lastName'];
-        $email = $customer['emailAddress'];
-        $card_number = $order['cardNumber'];
-        $card_expires = $order['cardExpires'];
-        $card_name = card_name($order['cardType']);
+        $customer = get_customer($order['customerid']);
+        $name = $customer['firstname'] . ' ' . $customer['lastname'];
+        $email = $customer['emailaddress'];
+        $card_number = $order['cardnumber'];
+        $card_expires = $order['cardexpires'];
+        $card_name = card_name($order['cardtype']);
 
-        $shipping_address = get_address($order['shipAddressID']);
+        $shipping_address = get_address($order['shipaddressid']);
         $ship_line1 = $shipping_address['line1'];
         $ship_line2 = $shipping_address['line2'];
         $ship_city = $shipping_address['city'];
         $ship_state = $shipping_address['state'];
-        $ship_zip = $shipping_address['zipCode'];
+        $ship_zip = $shipping_address['zipcode'];
         $ship_phone = $shipping_address['phone'];
 
-        $billing_address = get_address($order['billingAddressID']);
+        $billing_address = get_address($order['billingaddressid']);
         $bill_line1 = $billing_address['line1'];
         $bill_line2 = $billing_address['line2'];
         $bill_city = $billing_address['city'];
         $bill_state = $billing_address['state'];
-        $bill_zip = $billing_address['zipCode'];
+        $bill_zip = $billing_address['zipcode'];
         $bill_phone = $billing_address['phone'];
 
         include 'order.php';
@@ -65,12 +65,12 @@ switch($action) {
         // Get order data
         $order_id = filter_input(INPUT_POST, 'order_id', FILTER_VALIDATE_INT);
         $order = get_order($order_id);
-        $order_date = date('M j, Y', strtotime($order['orderDate']));
+        $order_date = date('M j, Y', strtotime($order['orderdate']));
 
         // Get customer data
-        $customer = get_customer($order['customerID']);
-        $customer_name = $customer['lastName'] . ', ' . $customer['firstName'];
-        $email = $customer['emailAddress'];
+        $customer = get_customer($order['customerid']);
+        $customer_name = $customer['lastname'] . ', ' . $customer['firstname'];
+        $email = $customer['emailaddress'];
 
         include 'confirm_delete.php';
         break;

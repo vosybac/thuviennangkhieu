@@ -1,5 +1,5 @@
-<?php include 'view/header.php'; ?>
-<?php include 'view/sidebar_admin.php'; ?>
+<?php include '../../view/header_admin.php'; ?>
+<?php include '../../view/sidebar_admin.php'; ?>
 <main>
     <h1>Order Information</h1>
     <p>Order Number: <?php echo $order_id; ?></p>
@@ -7,7 +7,7 @@
     <p>Customer: <?php echo htmlspecialchars($name) . ' (' . 
             htmlspecialchars($email) . ')'; ?></p>
     <h2>Shipping</h2>
-    <?php if ($order['shipDate'] === NULL) : ?>
+    <?php if ($order['shipdate'] === NULL) : ?>
         <p>Ship Date: Not yet shipped</p>
         <form action="." method="post" >
             <input type="hidden" name="action" value="set_ship_date">
@@ -23,7 +23,7 @@
         </form>
 
     <?php else:
-        $ship_date = date('M j, Y', strtotime($order['shipDate']));
+        $ship_date = date('M j, Y', strtotime($order['shipdate']));
         ?>
         <p>Ship Date: <?php echo $ship_date; ?></p>
     <?php endif; ?>
@@ -62,11 +62,11 @@
         <?php
         $subtotal = 0;
         foreach ($order_items as $item) :
-            $product_id = $item['productID'];
+            $product_id = $item['productid'];
             $product = get_product($product_id);
-            $item_name = $product['productName'];
-            $list_price = $item['itemPrice'];
-            $savings = $item['discountAmount'];
+            $item_name = $product['productname'];
+            $list_price = $item['itemprice'];
+            $savings = $item['discountamount'];
             $your_cost = $list_price - $savings;
             $quantity = $item['quantity'];
             $line_total = $your_cost * $quantity;
@@ -102,25 +102,25 @@
                 <?php echo htmlspecialchars($ship_state); ?> Tax:
             </td>
             <td class="right">
-                <?php echo sprintf('$%.2f', $order['taxAmount']); ?>
+                <?php echo sprintf('$%.2f', $order['taxamount']); ?>
             </td>
         </tr>
         <tr>
             <td colspan="5" class="right">Shipping:</td>
             <td class="right">
-                <?php echo sprintf('$%.2f', $order['shipAmount']); ?>
+                <?php echo sprintf('$%.2f', $order['shipamount']); ?>
             </td>
         </tr>
             <tr>
             <td colspan="5" class="right">Total:</td>
             <td class="right">
                 <?php
-                    $total = $subtotal + $order['taxAmount'] +
-                             $order['shipAmount'];
+                    $total = $subtotal + $order['taxamount'] +
+                             $order['shipamount'];
                     echo sprintf('$%.2f', $total);
                 ?>
             </td>
         </tr>
 </table>
 </main>
-<?php include 'view/footer.php'; ?>
+<?php include '../../view/footer.php'; ?>
