@@ -33,7 +33,7 @@ switch ($action) {
         $item_count = cart_item_count();
         $item_shipping = 5;
         $shipping_cost = shipping_cost();
-        $shipping_address = get_address($_SESSION['user']['shipAddressID']);
+        $shipping_address = get_address($_SESSION['user']['shipaddressid']);
         $state = $shipping_address['state'];
         $tax = tax_amount($subtotal);    // function from order_db.php file
         $total = $subtotal + $tax + $shipping_cost;
@@ -51,7 +51,7 @@ switch ($action) {
         $cc_ccv_message = '';
         $cc_expiration_message = '';
         
-        $billing_address = get_address($_SESSION['user']['billingAddressID']);
+        $billing_address = get_address($_SESSION['user']['billingaddressid']);
         include 'checkout_payment.php';
         break;
     case 'process':
@@ -64,7 +64,7 @@ switch ($action) {
         $card_cvv = filter_input(INPUT_POST, 'card_cvv');
         $card_expires = filter_input(INPUT_POST, 'card_expires');
 
-        $billing_address = get_address($_SESSION['user']['billingAddressID']);
+        $billing_address = get_address($_SESSION['user']['billingaddressid']);
 
         // Validate card data
         // NOTE: This uses functions from the util/validation.php file
