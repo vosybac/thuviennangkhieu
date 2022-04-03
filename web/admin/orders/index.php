@@ -27,7 +27,7 @@ switch($action) {
 
         // Get order data
         $order = get_order($order_id);
-        $order_date = date('M j, Y', strtotime($order['orderDate']));
+        $order_date = date('M j, Y', strtotime($order['orderdate']));
         $order_items = get_order_items($order_id);
 
         // Get customer data

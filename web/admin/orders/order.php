@@ -53,11 +53,11 @@
     <table id="cart">
         <tr id="cart_header">
             <th class="left">Item</th>
-            <th class="right">List Price</th>
-            <th class="right">Savings</th>
-            <th class="right">Your Cost</th>
-            <th class="right">Quantity</th>
-            <th class="right">Line Total</th>
+            <th class="right">Giá</th>
+            <th class="right">Khuyến Mãi</th>
+            <th class="right">Chi phí</th>
+            <th class="right">Số lượng</th>
+            <th class="right">Tổng cộng</th>
         </tr>
         <?php
         $subtotal = 0;
