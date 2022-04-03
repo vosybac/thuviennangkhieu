@@ -77,9 +77,9 @@ function add_order_item($order_id, $product_id,
                         $item_price, $discount, $quantity) {
     global $db;
     $query = '
-        INSERT INTO OrderItems (orderid, productid, itemprice,
+        INSERT INTO orderitems (itemid, orderid, productid, itemprice,
                                 discountamount, quantity)
-        VALUES (:order_id, :product_id, :item_price, :discount, :quantity)';
+        VALUES (nextval(\'books_sequence\'), :order_id, :product_id, :item_price, :discount, :quantity)';
     $statement = $db->prepare($query);
     $statement->bindValue(':order_id', $order_id);
     $statement->bindValue(':product_id', $product_id);
