@@ -42,9 +42,9 @@ function get_category($category_id) {
 function add_category($name) {
     global $db;
     $query = 'INSERT INTO categories
-                 (categoryname)
+                 (categoryid, categoryname)
               VALUES
-                 (:name)';
+                 (nextval(\'books_sequence\'), :name)';
     try {
         $statement = $db->prepare($query);
         $statement->bindValue(':name', $name);
