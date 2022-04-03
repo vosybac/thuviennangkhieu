@@ -1,5 +1,5 @@
-<?php include 'view/header.php'; ?>
-<?php include 'view/sidebar_admin.php'; ?>
+<?php include '../../view/header_admin.php'; ?>
+<?php include '../../view/sidebar_admin.php'; ?>
 <main>
     <h1>Outstanding Orders</h1>
     <?php if (count($new_orders) > 0 ) : ?>

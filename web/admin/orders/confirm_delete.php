@@ -1,5 +1,5 @@
-<?php include 'view/header.php'; ?>
-<?php include 'view/sidebar_admin.php'; ?>
+<?php include '../../view/header_admin.php'; ?>
+<?php include '../../view/sidebar_admin.php'; ?>
 <main>
     <h2>Delete Order</h2>
     <p>Order Number: <?php echo $order_id; ?></p>
@@ -17,4 +17,4 @@
         <input type="submit" value="Cancel">
     </form>
 </main>
-<?php include 'view/footer.php'; ?>
+<?php include '../../view/footer.php'; ?>
