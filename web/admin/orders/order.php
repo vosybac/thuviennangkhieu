@@ -75,26 +75,26 @@
             <tr>
                 <td><?php echo htmlspecialchars($item_name); ?></td>
                 <td class="right">
-                    <?php echo sprintf('$%.2f', $list_price); ?>
+                    <?php echo sprintf('%.2f VND', $list_price); ?>
                 </td>
                 <td class="right">
-                    <?php echo sprintf('$%.2f', $savings); ?>
+                    <?php echo sprintf('%.2f VND', $savings); ?>
                 </td>
                 <td class="right">
-                    <?php echo sprintf('$%.2f', $your_cost); ?>
+                    <?php echo sprintf('%.2f VND', $your_cost); ?>
                 </td>
                 <td class="right">
                     <?php echo $quantity; ?>
                 </td>
                 <td class="right">
-                    <?php echo sprintf('$%.2f', $line_total); ?>
+                    <?php echo sprintf('%.2f VND', $line_total); ?>
                 </td>
             </tr>
         <?php endforeach; ?>
         <tr id="cart_footer">
             <td colspan="5" class="right">Subtotal:</td>
             <td class="right">
-                <?php echo sprintf('$%.2f', $subtotal); ?>
+                <?php echo sprintf('%.2f VND', $subtotal); ?>
             </td>
         </tr>
         <tr>
@@ -102,7 +102,7 @@
                 <?php echo htmlspecialchars($ship_state); ?> Tax:
             </td>
             <td class="right">
-                <?php echo sprintf('$%.2f', $order['taxamount']); ?>
+                <?php echo sprintf('%.2f VND', $order['taxamount']); ?>
             </td>
         </tr>
         <tr>
@@ -117,7 +117,7 @@
                 <?php
                     $total = $subtotal + $order['taxamount'] +
                              $order['shipamount'];
-                    echo sprintf('$%.2f', $total);
+                    echo sprintf('%.2f VND', $total);
                 ?>
             </td>
         </tr>
