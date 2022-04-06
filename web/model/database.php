@@ -1,8 +1,8 @@
 <?php
 // Set up the database connection
-$dsn = 'pgsql:host=ec2-34-207-12-160.compute-1.amazonaws.com;dbname=ddvh7as1328tlc';
-$username =  'knjxznfeftubxq';// //'mgs_user';
-$password =  'ff0f4387a3b114364673fdbcdc49a616b6fd2b54ba97b3ad4438437c0c106396';
+$dsn = 'mysql:host=localhost;dbname=my_guitar_shop2';
+$username =  'root';// //'mgs_user';
+$password =  '';
 $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 
 try {

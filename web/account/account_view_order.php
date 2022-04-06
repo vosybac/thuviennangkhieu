@@ -1,5 +1,5 @@
 <?php include '../view/header.php'; ?>
-<?php include '../view/sidebar.php'; ?>
+
 <main>
     <h1>Your Order</h1>
     <p>Order Number: <?php echo $order_id; ?></p>
@@ -109,4 +109,4 @@
         </tr>
 </table>
 </main>
-<?php include '../view/footer.php'; ?>
+
