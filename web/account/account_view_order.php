@@ -1,5 +1,8 @@
 <?php include '../view/header.php'; ?>
 
+<aside>
+</aside>
+
 <main>
     <h1>Đơn hàng của bạn</h1>
     <p>Số đơn hàng: <?php echo $order_id; ?></p>
