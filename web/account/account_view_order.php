@@ -1,6 +1,6 @@
 <?php include '../view/header.php'; ?>
 
-<aside>
+<aside style="margin: .5em 0;">
 </aside>
 
 <main>
@@ -113,3 +113,4 @@
 </table>
 </main>
 
+<?php include '../view/footer.php'; ?>
