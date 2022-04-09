@@ -24,8 +24,8 @@
         <?php echo htmlspecialchars($shipping_address['zipcode']); ?><br>
         <?php echo htmlspecialchars($shipping_address['phone']); ?>
     </p>
-    <h2>Billing</h2>
-    <p>Card Number: ...<?php echo substr($order['cardnumber'], -4); ?></p>
+    <h2>Thanh toán</h2>
+    <p>Số thẻ: ...<?php echo substr($order['cardnumber'], -4); ?></p>
     <p><?php echo htmlspecialchars($billing_address['line1']); ?><br>
         <?php if ( strlen($billing_address['line2']) > 0 ) : ?>
             <?php echo htmlspecialchars($billing_address['line2']); ?><br>
@@ -78,27 +78,27 @@
             </tr>
         <?php endforeach; ?>
         <tr id="cart_footer">
-            <td colspan="5" class="right">Subtotal:</td>
+            <td colspan="5" class="right">Tổng phụ:</td>
             <td class="right">
                 <?php echo sprintf('%.2f VND', $subtotal); ?>
             </td>
         </tr>
         <tr>
             <td colspan="5" class="right">
-                <?php echo htmlspecialchars($shipping_address['state']); ?> Tax:
+                <?php echo htmlspecialchars($shipping_address['state']); ?> Thuế:
             </td>
             <td class="right">
                 <?php echo sprintf('%.2f VND', $order['taxamount']); ?>
             </td>
         </tr>
         <tr>
-            <td colspan="5" class="right">Shipping:</td>
+            <td colspan="5" class="right">Phí vận chuyển:</td>
             <td class="right">
                 <?php echo sprintf('%.2f VND', $order['shipamount']); ?>
             </td>
         </tr>
             <tr>
-            <td colspan="5" class="right">Total:</td>
+            <td colspan="5" class="right">Tổng:</td>
             <td class="right">
                 <?php
                     $total = $subtotal + $order['taxamount'] +
