@@ -1,14 +1,14 @@
 <?php include '../view/header.php'; ?>
 
 <main>
-    <h1>Your Order</h1>
-    <p>Order Number: <?php echo $order_id; ?></p>
-    <p>Order Date: <?php echo $order_date; ?></p>
-    <h2>Shipping</h2>
-    <p>Ship Date:
+    <h1>Đơn hàng của bạn</h1>
+    <p>Số đơn hàng: <?php echo $order_id; ?></p>
+    <p>Ngày tạo đơn: <?php echo $order_date; ?></p>
+    <h2>Đang vận chuyển</h2>
+    <p>Ngày vận chuyển:
         <?php
             if ($order['shipdate'] === NULL) {
-                echo 'Not shipped yet';
+                echo 'vẫn chưa chuyển';
             } else {
                 $ship_date = strtotime($order['shipdate']);
                 echo date('M j, Y', $ship_date);
@@ -35,7 +35,7 @@
         <?php echo htmlspecialchars($billing_address['zipcode']); ?><br>
         <?php echo htmlspecialchars($billing_address['phone']); ?>
     </p>
-    <h2>Order Items</h2>
+    <h2>Chi tiết mặt hàng trong đơn.</h2>
     <table id="cart">
         <tr id="cart_header">
             <th class="left">Mặt hàng</th>

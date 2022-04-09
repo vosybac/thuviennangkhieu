@@ -1,7 +1,7 @@
 <?php include '../../view/header_admin.php'; ?>
 <?php include '../../view/sidebar_admin.php'; ?>
 <main>
-    <h1>Outstanding Orders</h1>
+    <h1>Đơn hàng chờ vận chuyển.</h1>
     <?php if (count($new_orders) > 0 ) : ?>
         <ul>
             <?php foreach($new_orders as $order) :
@@ -21,9 +21,9 @@
             <?php endforeach; ?>
         </ul>
     <?php else: ?>
-        <p>There are no shipped orders.</p>
+        <p>Không có đơn hàng nào chưa chuyển.</p>
     <?php endif; ?>
-    <h1>Shipped Orders</h1>
+    <h1>Đơn hàng đã chuyển.</h1>
     <?php if (count($old_orders) > 0 ) : ?>
         <ul>
             <?php foreach($old_orders as $order) :
@@ -43,7 +43,7 @@
             <?php endforeach; ?>
         </ul>
     <?php else: ?>
-        <p>There are no shipped orders.</p>
+        <p>Không có đơn hàng nào đã chuyển.</p>
     <?php endif; ?>
 </main>
 <?php include '../../view/footer_admin.php'; ?>
