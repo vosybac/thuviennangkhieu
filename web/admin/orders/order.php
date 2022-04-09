@@ -1,13 +1,13 @@
 <?php include '../../view/header_admin.php'; ?>
 <main>
-    <h1>Order Information</h1>
-    <p>Order Number: <?php echo $order_id; ?></p>
-    <p>Order Date: <?php echo $order_date; ?></p>
-    <p>Customer: <?php echo htmlspecialchars($name) . ' (' . 
+    <h1>Thông tin đơn hàng.</h1>
+    <p>Số đơn hàng: <?php echo $order_id; ?></p>
+    <p>Ngày tạo đơn: <?php echo $order_date; ?></p>
+    <p>Khách hàng: <?php echo htmlspecialchars($name) . ' (' . 
             htmlspecialchars($email) . ')'; ?></p>
-    <h2>Shipping</h2>
+    <h2>Chuyển đến</h2>
     <?php if ($order['shipdate'] === NULL) : ?>
-        <p>Ship Date: Not yet shipped</p>
+        <p>Ngày đặt chuyển: vẫn chưa chuyển</p>
         <form action="." method="post" >
             <input type="hidden" name="action" value="set_ship_date">
             <input type="hidden" name="order_id"
@@ -35,10 +35,10 @@
         <?php echo htmlspecialchars($ship_zip); ?><br>
         <?php echo htmlspecialchars($ship_phone); ?>
     </p>
-    <h2>Billing</h2>
-    <p>Card Number: <?php echo htmlspecialchars($card_number) . ' (' . 
+    <h2>Thanh toán</h2>
+    <p>Số CARD: <?php echo htmlspecialchars($card_number) . ' (' . 
             htmlspecialchars($card_name) . ')'; ?></p>
-    <p>Card Expires: <?php echo htmlspecialchars($card_expires); ?></p>
+    <p>Ngày hết hạn: <?php echo htmlspecialchars($card_expires); ?></p>
     <p><?php echo htmlspecialchars($bill_line1); ?><br>
         <?php if ( strlen($bill_line2) > 0 ) : ?>
             <?php echo htmlspecialchars($bill_line2); ?><br>
@@ -48,10 +48,10 @@
         <?php echo htmlspecialchars($bill_zip); ?><br>
         <?php echo htmlspecialchars($bill_phone); ?>
     </p>
-    <h2>Order Items</h2>
+    <h2>Mặt hàng</h2>
     <table id="cart">
         <tr id="cart_header">
-            <th class="left">Item</th>
+            <th class="left">Mặt hàng</th>
             <th class="right">Giá</th>
             <th class="right">Khuyến Mãi</th>
             <th class="right">Chi phí</th>
