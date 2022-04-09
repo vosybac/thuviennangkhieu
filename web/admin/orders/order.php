@@ -1,4 +1,10 @@
 <?php include '../../view/header_admin.php'; ?>
+
+
+<aside style="margin: .5em 0;">
+</aside>
+
+
 <main>
     <h1>Thông tin đơn hàng.</h1>
     <p>Số đơn hàng: <?php echo $order_id; ?></p>
@@ -12,19 +18,19 @@
             <input type="hidden" name="action" value="set_ship_date">
             <input type="hidden" name="order_id"
                    value="<?php echo $order_id; ?>">
-            <input type="submit" value="Ship Order">
+            <input type="submit" value="Chuyển Đơn Hàng">
         </form>
         <form action="." method="post" >
             <input type="hidden" name="action" value="confirm_delete">
             <input type="hidden" name="order_id"
                    value="<?php echo $order_id; ?>">
-            <input type="submit" value="Delete Order">
+            <input type="submit" value="Xóa Đơn Hàng">
         </form>
 
     <?php else:
         $ship_date = date('M j, Y', strtotime($order['shipdate']));
         ?>
-        <p>Ship Date: <?php echo $ship_date; ?></p>
+        <p>Ngày vận chuyển: <?php echo $ship_date; ?></p>
     <?php endif; ?>
     <p><?php echo htmlspecialchars($ship_line1); ?><br>
         <?php if ( strlen($ship_line2) > 0 ) : ?>
@@ -91,27 +97,27 @@
             </tr>
         <?php endforeach; ?>
         <tr id="cart_footer">
-            <td colspan="5" class="right">Subtotal:</td>
+            <td colspan="5" class="right">Tổng phụ:</td>
             <td class="right">
                 <?php echo sprintf('%.2f VND', $subtotal); ?>
             </td>
         </tr>
         <tr>
             <td colspan="5" class="right">
-                <?php echo htmlspecialchars($ship_state); ?> Tax:
+                <?php echo htmlspecialchars($ship_state); ?> Thuế:
             </td>
             <td class="right">
                 <?php echo sprintf('%.2f VND', $order['taxamount']); ?>
             </td>
         </tr>
         <tr>
-            <td colspan="5" class="right">Shipping:</td>
+            <td colspan="5" class="right">Chi phí vận chuyển:</td>
             <td class="right">
                 <?php echo sprintf('$%.2f', $order['shipamount']); ?>
             </td>
         </tr>
             <tr>
-            <td colspan="5" class="right">Total:</td>
+            <td colspan="5" class="right">Tổng:</td>
             <td class="right">
                 <?php
                     $total = $subtotal + $order['taxamount'] +
