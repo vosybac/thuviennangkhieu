@@ -1,14 +1,12 @@
 <?php include '../view/header.php'; ?>
-<?php include '../view/sidebar.php'; ?>
 <main>
-    <h1 style="float:right"><?php echo htmlspecialchars($category_name); ?></h1>
-    <br/>
+    <h1><?php echo htmlspecialchars($category_name); ?></h1>
     <?php if (count($products) == 0) : ?>
         <p>There are no products in this category.</p>
     <?php else: ?>
         <?php foreach ($products as $product) : ?>
-        
-             <div  class="card" style="float:right">
+         <div id="left_column" class="card">
+
             <?php
                 // Parse data
                 $category_id = $product['categoryid'];
@@ -31,7 +29,7 @@
                     </a>
                 </div>
             </div>
-        
+            <br/>
         <?php endforeach; ?>
     <?php endif; ?>
 </main>
