@@ -1,13 +1,13 @@
 <?php include '../view/header.php'; ?>
 <?php include '../view/sidebar.php'; ?>
 <main>
-    <h1><?php echo htmlspecialchars($category_name); ?></h1>
+    <h1 style="float:right"><?php echo htmlspecialchars($category_name); ?></h1>
     <?php if (count($products) == 0) : ?>
         <p>There are no products in this category.</p>
     <?php else: ?>
         <?php foreach ($products as $product) : ?>
-        <div id="left_column">
-             <div  class="card">
+        
+             <div  class="card" style="float:right">
             <?php
                 // Parse data
                 $category_id = $product['categoryid'];
@@ -30,7 +30,7 @@
                     </a>
                 </div>
             </div>
-        </div>
+        
         <?php endforeach; ?>
     <?php endif; ?>
 </main>
