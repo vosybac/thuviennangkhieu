@@ -15,10 +15,7 @@
               <h1><?php echo htmlspecialchars($category_name); ?></h1>
         
         
-        <div class="row">
-            <div class="col-12">
-                <div class="card-deck">
-
+        <div class="row justify-content-center"">
 
         <?php foreach ($products as $product) : ?>
 
@@ -34,8 +31,8 @@
                 $image_alt = 'Image filename: ' . $image_filename;
             ?>
             
-            <div class="col-auto mb-2">
-            <div class="card" style="width: 12rem;">
+            <div class="col-auto mb-3">
+            <div class="card" style="width: 18rem;">
                 <img class="card-img-top img-adjusted" src="<?php echo $image_path; ?>"
                             alt="<?php echo $image_alt; ?>" />
               
@@ -51,11 +48,6 @@
             
             
         <?php endforeach; ?>
-
-
-            </div>
-        </div>
-
         </div>
         
         
