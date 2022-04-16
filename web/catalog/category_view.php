@@ -10,6 +10,7 @@
         <div id="right_column">
               <h1><?php echo htmlspecialchars($category_name); ?></h1>
         <div class="card">
+        <ul class="list-group list-group-flush">
         <?php foreach ($products as $product) : ?>
             <?php
                 // Parse data
@@ -22,6 +23,7 @@
                 $image_path = $app_path_base . 'images/' . $image_filename;
                 $image_alt = 'Image filename: ' . $image_filename;
             ?>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
            
                 <img class="card-img-top" src="<?php echo $image_path; ?>"
                             alt="<?php echo $image_alt; ?>" />
@@ -32,8 +34,11 @@
                     <a class="btn btn-primary" href="<?php echo '?product_id=' . $product['productid']; ?>">Xem
                     </a>
                 </div>
+
+            </li>
             
         <?php endforeach; ?>
+        </ul>
         </div>
         </div>
     <?php endif; ?>
