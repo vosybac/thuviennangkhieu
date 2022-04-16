@@ -6,7 +6,7 @@
         <p>There are no products in this category.</p>
     <?php else: ?>
         <?php foreach ($products as $product) : ?>
-        <p>
+         <div id="left_column" class="card" style="width: 18rem;">
 
             <?php
                 // Parse data
@@ -19,21 +19,17 @@
                 $image_path = $app_path_base . 'images/' . $image_filename;
                 $image_alt = 'Image filename: ' . $image_filename;
             ?>
-            <h1><?php echo htmlspecialchars($product_name); ?></h1>
-            <div id="left_column" class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="<?php echo $image_path; ?>"
+           
+                <img class="card-img-top" src="<?php echo $image_path; ?>"
                             alt="<?php echo $image_alt; ?>" />
               
                 <div class="card-body">
                      <h5 class="card-title"><?php echo htmlspecialchars($category_name); ?></h5>
                       <p class="card-text"><?php echo htmlspecialchars($product['productname']); ?></p>
-                    <a class="btn btn-primary" href="<?php echo '?product_id=' . $product['productid']; ?>">
+                    <a class="btn btn-primary" href="<?php echo '?product_id=' . $product['productid']; ?>">Xem
                     </a>
                 </div>
             </div>
-
-            
-        </p>
         <?php endforeach; ?>
     <?php endif; ?>
 </main>
