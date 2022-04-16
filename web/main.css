@@ -99,7 +99,7 @@ form {
 /* the styles for the div tags that divide the page into sections */
 #left_column {
     float: left;
-    width: 350px;
+    width: 150px;
 }
 #right_column {
     float: left;
