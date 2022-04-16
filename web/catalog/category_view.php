@@ -6,7 +6,7 @@
         <p>There are no products in this category.</p>
     <?php else: ?>
         <?php foreach ($products as $product) : ?>
-         <div id="left_column" class="card" style="width: 18rem;">
+         <div  class="card" style="width: 18rem;">
 
             <?php
                 // Parse data
