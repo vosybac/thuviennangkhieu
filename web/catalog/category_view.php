@@ -4,9 +4,8 @@
     <?php if (count($products) == 0) : ?>
         <p>There are no products in this category.</p>
     <?php else: ?>
+        <div id="left_column" class="card">
         <?php foreach ($products as $product) : ?>
-         <div id="left_column" class="card">
-
             <?php
                 // Parse data
                 $category_id = $product['categoryid'];
@@ -28,8 +27,9 @@
                     <a class="btn btn-primary" href="<?php echo '?product_id=' . $product['productid']; ?>">Xem
                     </a>
                 </div>
-            </div>
+            
         <?php endforeach; ?>
+        </div>
     <?php endif; ?>
 </main>
 <?php include '../view/footer.php'; ?>
