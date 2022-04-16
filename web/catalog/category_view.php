@@ -4,7 +4,7 @@
     <?php if (count($products) == 0) : ?>
         <p>There are no products in this category.</p>
     <?php else: ?>
-        <div id="left_column" class="card">
+        <div class="card" style="float:left;">
         <?php foreach ($products as $product) : ?>
             <?php
                 // Parse data
