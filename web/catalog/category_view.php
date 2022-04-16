@@ -1,22 +1,11 @@
 <?php include '../view/header.php'; ?>
-<?php include '../view/sidebar.php'; ?>
-
-
 <main>
-
-
-
     <?php if (count($products) == 0) : ?>
         <p>There are no products in this category.</p>
     <?php else: ?>
         
-        
-        
-
-              <h1><?php echo htmlspecialchars($category_name); ?></h1>
-        
-        
-        <div class="row justify-content-center"">
+    <h1><?php echo htmlspecialchars($category_name); ?></h1>
+    <div class="row justify-content-center"">
 
         <?php foreach ($products as $product) : ?>
 
@@ -50,9 +39,7 @@
             
         <?php endforeach; ?>
         </div>
-        
-        
-       
+           
     <?php endif; ?>
 
 </main>
