@@ -35,7 +35,7 @@
             ?>
             
             <div class="card">
-                <img class="card-img-top" src="<?php echo $image_path; ?>"
+                <img class="card-img-top img-adjusted" src="<?php echo $image_path; ?>"
                             alt="<?php echo $image_alt; ?>" />
               
                 <div class="card-body">
