@@ -20,7 +20,7 @@
                 $image_alt = 'Image filename: ' . $image_filename;
             ?>
             <h1><?php echo htmlspecialchars($product_name); ?></h1>
-            <div id="left_column">
+            <div id="left_column" class="row cart-item-row">
                 <p><img src="<?php echo $image_path; ?>"
                         alt="<?php echo $image_alt; ?>" /></p>
             </div>
