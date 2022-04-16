@@ -1,6 +1,6 @@
 <?php include '../view/header.php'; ?>
 <main>
-    <h1><?php echo htmlspecialchars($category_name); ?></h1>
+  
     <?php if (count($products) == 0) : ?>
         <p>There are no products in this category.</p>
     <?php else: ?>
@@ -8,6 +8,7 @@
             <?php include '../view/sidebar.php'; ?>      
         </div>
         <div id="right_column">
+              <h1><?php echo htmlspecialchars($category_name); ?></h1>
         <div class="card">
         <?php foreach ($products as $product) : ?>
             <?php
