@@ -38,7 +38,7 @@
             </tr>
             <tr>
                 <td colspan="4" class="right">
-                    <input type="submit" value="Update Cart">
+                    <input type="submit" value="Cập nhật giỏ hàng">
                 </td>
             </tr>
             </table>

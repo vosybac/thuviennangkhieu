@@ -46,7 +46,7 @@
                value="<?php echo $product_id; ?>" />
         <b>Số lượng:</b>&nbsp;
         <input type="text" name="quantity" value="1" size="2" />
-        <input type="submit" value="Add to Cart" />
+        <input type="submit" value="Thêm vào giỏ hàng" />
     </form>
     <h2>Mô tả:</h2>
     <?php echo $description_with_tags; ?>
