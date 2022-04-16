@@ -2,6 +2,7 @@
 <?php include '../view/sidebar.php'; ?>
 <main>
     <h1 style="float:right"><?php echo htmlspecialchars($category_name); ?></h1>
+    <br/>
     <?php if (count($products) == 0) : ?>
         <p>There are no products in this category.</p>
     <?php else: ?>
