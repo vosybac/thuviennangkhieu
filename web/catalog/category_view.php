@@ -4,7 +4,11 @@
     <?php if (count($products) == 0) : ?>
         <p>There are no products in this category.</p>
     <?php else: ?>
-        <div class="card" style="float:left;">
+        <div id="left_column">
+            <?php include '../view/sidebar.php'; ?>      
+        </div>
+        <div id="right_column">
+        <div class="card">
         <?php foreach ($products as $product) : ?>
             <?php
                 // Parse data
@@ -29,6 +33,7 @@
                 </div>
             
         <?php endforeach; ?>
+        </div>
         </div>
     <?php endif; ?>
 </main>
