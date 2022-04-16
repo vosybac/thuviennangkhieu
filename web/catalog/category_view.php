@@ -20,14 +20,19 @@
                 $image_alt = 'Image filename: ' . $image_filename;
             ?>
             <h1><?php echo htmlspecialchars($product_name); ?></h1>
-            <div id="left_column" class="row cart-item-row">
-                <p><img src="<?php echo $image_path; ?>"
-                        alt="<?php echo $image_alt; ?>" /></p>
+            <div id="left_column"  class="row cart-item-row" >
+                <div class="col-md-6">
+                    <p ><img src="<?php echo $image_path; ?>"
+                            alt="<?php echo $image_alt; ?>" /></p>
+                </div>
+                 <div class="col-md-4">
+                    <a  href="<?php echo '?product_id=' . $product['productid']; ?>">
+                    <?php echo htmlspecialchars($product['productname']); ?>
+                    </a>
+                </div>
             </div>
 
-            <a href="<?php echo '?product_id=' . $product['productid']; ?>">
-                <?php echo htmlspecialchars($product['productname']); ?>
-            </a>
+            
         </p>
         <?php endforeach; ?>
     <?php endif; ?>
