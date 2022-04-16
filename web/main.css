@@ -99,7 +99,7 @@ form {
 /* the styles for the div tags that divide the page into sections */
 
 .card-deck .card {
-    max-width: calc(25% - 30px);
+    max-width: calc(25% - 10px);
 }
 
 #left_column {

@@ -34,7 +34,7 @@
                 $image_alt = 'Image filename: ' . $image_filename;
             ?>
             
-            <div class="card" style="float: none;">
+            <div class="card">
                 <img class="card-img-top" src="<?php echo $image_path; ?>"
                             alt="<?php echo $image_alt; ?>" />
               
