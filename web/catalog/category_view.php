@@ -29,7 +29,6 @@
                     </a>
                 </div>
             </div>
-            <br/>
         <?php endforeach; ?>
     <?php endif; ?>
 </main>
