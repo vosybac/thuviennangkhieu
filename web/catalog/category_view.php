@@ -35,7 +35,7 @@
             ?>
             
             <div class="col-auto mb-2">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 10rem;">
                 <img class="card-img-top img-adjusted" src="<?php echo $image_path; ?>"
                             alt="<?php echo $image_alt; ?>" />
               
