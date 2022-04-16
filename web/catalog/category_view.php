@@ -20,14 +20,14 @@
                 $image_alt = 'Image filename: ' . $image_filename;
             ?>
             <h1><?php echo htmlspecialchars($product_name); ?></h1>
-            <div id="left_column"  class="row cart-item-row" >
-                <div class="col-md-6">
-                    <p ><img src="<?php echo $image_path; ?>"
-                            alt="<?php echo $image_alt; ?>" /></p>
-                </div>
-                 <div class="col-md-4">
-                    <a  href="<?php echo '?product_id=' . $product['productid']; ?>">
-                    <?php echo htmlspecialchars($product['productname']); ?>
+            <div id="left_column" class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="<?php echo $image_path; ?>"
+                            alt="<?php echo $image_alt; ?>" />
+              
+                <div class="card-body">
+                     <h5 class="card-title"><?php echo htmlspecialchars($category_name); ?></h5>
+                      <p class="card-text"><?php echo htmlspecialchars($product['productname']); ?></p>
+                    <a class="btn btn-primary" href="<?php echo '?product_id=' . $product['productid']; ?>">
                     </a>
                 </div>
             </div>
