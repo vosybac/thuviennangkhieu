@@ -1,16 +1,25 @@
 <?php include '../view/header.php'; ?>
+
+<div class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <?php include '../view/sidebar.php'; ?>      
+</div>
+
 <main>
-  
+  <div class="home container">
+  <div class="row">
+  <div class="col-md-9 pt-5">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-3">
+
     <?php if (count($products) == 0) : ?>
         <p>There are no products in this category.</p>
     <?php else: ?>
-        <div id="left_column">
-            <?php include '../view/sidebar.php'; ?>      
-        </div>
-        <div id="right_column">
+        
+        
+        
+        <div class="col mb-4">
               <h1><?php echo htmlspecialchars($category_name); ?></h1>
         
-        <ul class="list-group list-group-flush">
+        
 
         <?php foreach ($products as $product) : ?>
 
@@ -25,7 +34,7 @@
                 $image_path = $app_path_base . 'images/' . $image_filename;
                 $image_alt = 'Image filename: ' . $image_filename;
             ?>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
+            
             <div class="card">
             
            
@@ -40,12 +49,17 @@
                 </div>
             </div>
 
-            </li>
+            
             
         <?php endforeach; ?>
-        </ul>
+        
         
         </div>
     <?php endif; ?>
+
+</div>
+</div>
+</div>
+</div>
 </main>
 <?php include '../view/footer.php'; ?>
