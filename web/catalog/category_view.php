@@ -34,7 +34,8 @@
                 $image_alt = 'Image filename: ' . $image_filename;
             ?>
             
-            <div class="card">
+            <div class="col-auto mb-3">
+            <div class="card" style="width: 18rem;">
                 <img class="card-img-top img-adjusted" src="<?php echo $image_path; ?>"
                             alt="<?php echo $image_alt; ?>" />
               
@@ -44,6 +45,7 @@
                     <a class="btn btn-primary" href="<?php echo '?product_id=' . $product['productid']; ?>">Xem
                     </a>
                 </div>
+            </div>
             </div>
 
             
