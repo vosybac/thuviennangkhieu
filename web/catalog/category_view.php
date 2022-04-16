@@ -1,14 +1,9 @@
 <?php include '../view/header.php'; ?>
 
-<div class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <?php include '../view/sidebar.php'; ?>      
-</div>
 
 <main>
-  <div class="home container">
-  <div class="row">
-  <div class="col-md-9 pt-5">
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-3">
+
+
 
     <?php if (count($products) == 0) : ?>
         <p>There are no products in this category.</p>
@@ -16,7 +11,7 @@
         
         
         
-        <div class="col mb-4">
+
               <h1><?php echo htmlspecialchars($category_name); ?></h1>
         
         
@@ -35,9 +30,7 @@
                 $image_alt = 'Image filename: ' . $image_filename;
             ?>
             
-            <div class="card">
-            
-           
+            <div class="card" style="float: none;">
                 <img class="card-img-top" src="<?php echo $image_path; ?>"
                             alt="<?php echo $image_alt; ?>" />
               
@@ -54,12 +47,8 @@
         <?php endforeach; ?>
         
         
-        </div>
+       
     <?php endif; ?>
 
-</div>
-</div>
-</div>
-</div>
 </main>
 <?php include '../view/footer.php'; ?>
