@@ -6,8 +6,8 @@
         <p>There are no products in this category.</p>
     <?php else: ?>
         <?php foreach ($products as $product) : ?>
-         <div id="left_column" class="card" style="width: 18rem;">
-
+        <div id="left_column">
+             <div  class="card">
             <?php
                 // Parse data
                 $category_id = $product['categoryid'];
@@ -30,6 +30,7 @@
                     </a>
                 </div>
             </div>
+        </div>
         <?php endforeach; ?>
     <?php endif; ?>
 </main>
