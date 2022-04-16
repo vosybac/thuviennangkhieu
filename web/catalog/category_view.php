@@ -15,6 +15,10 @@
               <h1><?php echo htmlspecialchars($category_name); ?></h1>
         
         
+        <div class="row">
+            <div class="col-12">
+                <div class="card-deck">
+
 
         <?php foreach ($products as $product) : ?>
 
@@ -45,6 +49,12 @@
             
             
         <?php endforeach; ?>
+
+
+            </div>
+        </div>
+
+        </div>
         
         
        

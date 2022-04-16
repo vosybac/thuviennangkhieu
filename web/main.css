@@ -97,6 +97,11 @@ form {
 }
 
 /* the styles for the div tags that divide the page into sections */
+
+.card-deck .card {
+    max-width: calc(25% - 30px);
+}
+
 #left_column {
     float: left;
     width: 150px;
