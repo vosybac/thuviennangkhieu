@@ -34,7 +34,7 @@
                 $image_alt = 'Image filename: ' . $image_filename;
             ?>
             
-            <div class="col-auto mb-3">
+            <div class="col-auto mb-2">
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top img-adjusted" src="<?php echo $image_path; ?>"
                             alt="<?php echo $image_alt; ?>" />
